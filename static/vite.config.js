@@ -1,7 +1,7 @@
 import legacy from '@vitejs/plugin-legacy'
 import { defineConfig } from 'vite'
 
-const THEME = "scorpe";
+const THEME = "colibrys";
 
 export default defineConfig({
     base: "./",
