@@ -63,6 +63,3 @@ wp-cli.local.yml
 dump.sql
 maquette
 maquette/*
-
-wp-config.php
-BackupController.php
