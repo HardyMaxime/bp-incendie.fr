@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Titre du projet</title>
+        <meta name="description" content="Description du projet">
+        <meta name="robots" content="noindex">
+        <script defer type="module" src="/scripts/main.js"></script>
+    </head>
+    <body class="is-body home preload-transitions is-accueil" >
+        <hgroup class="fix-overflow">
+            <main role="main" class="main" >
+                <aside class="menu-wrapper is-hidden">
+                    <figure class="menu-background">
+                        <img src="./images/menu-background.jpg" width="1200px" height="1080" alt="" loading="lazy">
+                    </figure>
+                    <nav class="menu-navigation-wrapper reset-list" >
+                        <figure class="menu-navigation-background"></figure>
+                        <div class="menu-head">
+                            <div class="navbar-control navbar-control-search hide-min-mobile">
+                                <button type="button" id="open-search" class="navigation-link navbar-search-button open-search">
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite-search.svg#search"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="navbar-control hide-min-mobile">
+                                <div class="lg-switcher">
+                                    <div class="lg-switcher-current">FR</div>
+                                    <div class="lg-switcher-options">
+                                        <a href="#fr" aria-current="" >FR</a>
+                                        <a href="#en">EN</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="menu-button-close " >
+                                Fermer le menu
+                            </button>
+                        </div>
+                        <ul class="menu-primary">
+                            <li class="menu-jump-in menu-reveal-5">
+                                <a href="./index.html" class="link-with-arrow" >Home</a>
+                            </li>
+                            <li class="menu-jump-in menu-reveal-6">
+                                <a href="#" class="link-with-arrow" >About us</a>
+                            </li>
+                            <li class="menu-jump-in menu-reveal-7">
+                                <a href="#" class="link-with-arrow" >Our products</a>
+                            </li>
+                            <li class="menu-jump-in menu-reveal-8">
+                                <a href="./services.html" class="link-with-arrow" >Our trainings (TCS), and services</a>
+                            </li>
+                            <li class="menu-jump-in menu-reveal-9">
+                                <a href="#" class="link-with-arrow" >Photos in real life</a>
+                            </li>
+                            <li class="menu-jump-in menu-reveal-10">
+                                <a href="#" class="link-with-arrow " >Demo online</a>
+                            </li>
+                            <li class="menu-jump-in menu-reveal-11" >
+                                <a href="#" class="link-with-arrow " >Faq</a>
+                            </li>
+                            <li class="menu-jump-in menu-reveal-12">
+                                <a href="#" class="link-with-arrow " >Contact us</a>
+                            </li>
+                        </ul>
+                        <div class="menu-navigation-footer">
+                            <div class="menu-navigation-footer-item menu-fade-in menu-reveal-13">
+                                Le Hameau de la sucrerie, <br />
+                                5, Route de Laon <br />
+                                08 190 Saint Germainmont
+                            </div>
+                            <div class="menu-navigation-footer-item menu-fade-in menu-reveal-14">
+                                Tel + 33 (0) 3 24 73 00 00 <br />
+                                export@scorpe.eu
+                            </div>
+                            <ul class="networks-list reset-list menu-fade-in menu-reveal-15">
+                                <li>
+                                    <a href="#" title="" class="network-item" >
+                                        Facebook
+                                        <svg class="icon">
+                                            <use xlink:href="./images/networks.svg#facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="" class="network-item" >
+                                        Instagram
+                                        <svg class="icon">
+                                            <use xlink:href="./images/networks.svg#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="" class="network-item" >
+                                        Linkedin
+                                        <svg class="icon">
+                                            <use xlink:href="./images/networks.svg#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="" class="network-item" >
+                                        Youtube
+                                        <svg class="icon">
+                                            <use xlink:href="./images/networks.svg#youtube"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+                <section class="search-wrapper">
+                    <div class="search-wrapper-content">
+                        <button class="search-bar-button-close" type="button" aria-label="fermer la bar de recherche" id="close-search">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite-close.svg#close"></use>
+                            </svg>
+                        </button>
+                        <form class="search-bar-form" action="/" method="get" autocomplete="off">
+                            <input class="search-bar-input" type="text" name="s" placeholder="Rechercher un produit, une page, etc." id="input-search" >
+                            <button class="search-bar-button-start" type="submit" id="start-search" class="">
+                                <svg class="icon">
+                                    <use xlink:href="./images/sprite-search.svg#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <nav id="search-results" class="search-bar-results reset-list show">
+                            <div class="search-bar-results-info">
+                                <p>
+                                    Suggestion(s) pour votre recherche. <br>
+                                    Si vous ne trouvez pas ce que vous cherchez, appuyer sur la touche "Entrée" ou sur l'icon de la loupe pour plus de résultats.
+                                </p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span>Recherche en cours...</span>
+                                </li>
+                                <li>
+                                    <a href="/">
+                                        Alain affelou
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/">
+                                        Alain affelou
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <header class="header reveal stripe-lines-section has-hero-slider overflow-x">
+                    <section class="stripe-lines-wrapper container">
+                        <div class="stripe-line"></div>
+                        <div class="stripe-line"></div>
+                    </section>
+                    <section class="navbar navbar-home" >
+                        <div class="navbar-background"></div>
+                        <div class="navbar-content container">
+                            <a href="#" class="navbar-logo">
+                                <img src="./images/logo-scorpe.svg" class="light-logo" width="180" height="30" loading="lazy" alt="Scorpe Technologie">
+                                <img src="./images/logo-scorpe-black.svg" class="black-logo" width="180" height="30" loading="lazy" alt="Scorpe Technologie">
+                            </a>
+                            <div class="navbar-controls">
+                                <div class="navbar-control navbar-control-search hide-max-mobile">
+                                    <button type="button" id="open-search" class="navigation-link navbar-search-button open-search">
+                                        <svg class="icon">
+                                            <use xlink:href="./images/sprite-search.svg#search"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="navbar-control hide-max-mobile">
+                                    <div class="lg-switcher">
+                                        <div class="lg-switcher-current">FR</div>
+                                        <div class="lg-switcher-options">
+                                            <a href="#fr" aria-current="" >FR</a>
+                                            <a href="#en">EN</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar-control">
+                                    <button type="button" class="navbar-menu-button" >
+                                        <span class="navbar-menu-button-trait"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="header-content-wrapper hero-slider-wrapper overflow-x"  >
+                        <div class="splide header-slider-content hero-slider-content strech-slider" id="sliderHeader" aria-label="Dispovit">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <div class="splide__slide header-content-wrapper-item">
+                                        <hgroup class="header-title container">
+                                            <h1>RESCUE <br> AND SAFETY EQUIPMENT</h1>
+                                            <h2>TO SAVE LIVES</h2>
+                                        </hgroup>
+                                    </div>
+                                    <div class="splide__slide header-content-wrapper-item">
+                                        <hgroup class="header-title container">
+                                            <h1>RESCUE <br> AND SAFETY EQUIPMENT</h1>
+                                            <h2>TO SAVE LIVES</h2>
+                                        </hgroup>
+                                    </div>
+                                    <div class="splide__slide header-content-wrapper-item">
+                                        <hgroup class="header-title container">
+                                            <h1>RESCUE <br> AND SAFETY EQUIPMENT</h1>
+                                            <h2>TO SAVE LIVES</h2>
+                                        </hgroup>
+                                    </div>
+                                    <div class="splide__slide header-content-wrapper-item">
+                                        <hgroup class="header-title container">
+                                            <h1>RESCUE <br> AND SAFETY EQUIPMENT</h1>
+                                            <h2>TO SAVE LIVES</h2>
+                                        </hgroup>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="hero-aside-controls container" >
+                            <ul id="header-slider-pagination" class="hero-slider-pagination">
+                                <li class="hero-slider-pagination-item is-active" role="button">
+                                    <div class="hero-slider-pagination-item-progress">
+                                        <div class="hero-slider-pagination-item-progress-bar"></div>
+                                    </div>
+                                    <div class="hero-slider-pagination-item-text">
+                                        ROAD RESCUE
+                                    </div>
+                                </li>
+                                <li class="hero-slider-pagination-item" role="button">
+                                    <div class="hero-slider-pagination-item-progress">
+                                        <div class="hero-slider-pagination-item-progress-bar"></div>
+                                    </div>
+                                    <div class="hero-slider-pagination-item-text">
+                                        DISASTER RESCUE
+                                    </div>
+                                </li>
+                                <li class="hero-slider-pagination-item" role="button">
+                                    <div class="hero-slider-pagination-item-progress">
+                                        <div class="hero-slider-pagination-item-progress-bar"></div>
+                                    </div>
+                                    <div class="hero-slider-pagination-item-text">
+                                        FIRE
+                                    </div>
+                                </li>
+                                <li class="hero-slider-pagination-item" role="button">
+                                    <div class="hero-slider-pagination-item-progress">
+                                        <div class="hero-slider-pagination-item-progress-bar"></div>
+                                    </div>
+                                    <div class="hero-slider-pagination-item-text">
+                                        BREACHING TOOLS
+                                    </div>
+                                </li>
+                        </aside>
+                    </section>
+                    <section id="sliderBackgrounds" class="header-backgrounds hero-slider-backgrounds splide strech-slider overflow-x" >
+                        <div class="splide__track">
+                            <div class="splide__list">
+                                <figure class="splide__slide hero-background-figure" >
+                                    <img class="" src="./images/header-thumb-2.jpg" width="1920" height="1080" alt="Text alt slide 1">
+                                </figure>
+                                <figure class="splide__slide hero-background-figure" >
+                                    <img class="" src="./images/header-thumb-1.jpg" width="1920" height="1080" alt="Text alt slide 1">
+                                </figure>
+                                <figure class="splide__slide hero-background-figure" >
+                                    <img class="" src="./images/header-thumb-4.jpg" width="1920" height="1080" alt="Text alt slide 1">
+                                </figure>
+                                <figure class="splide__slide hero-background-figure" >
+                                    <img class="" src="./images/header-thumb-3.jpg" width="1920" height="1080" alt="Text alt slide 1">
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                </header>
+                <section class="section section-accueil section-about section-content container overflow-x">
+                    <div class="reveal">
+                        <h2 class="title-secondary slide-in-out reveal-2" >INNOVATION</h2>
+                        <div class="section-text-content pull-right slide-out-in reveal-2">
+                            Scorpe is a family where we trust each other. We’re always aiming for the progress, we’re not afraid to try new challenges. Change is not a constraint but on the contrary a necessity. No failure, only lessons. Matrix management
+                            <br />
+                            A part of our team is built with volunteers firefighters. We believe in soft skills, everyone has a skill he or she can use. <br> <br>
+                            <a href="#" rel="" class="link-with-arrow" >Call us for more informations</a>
+                        </div>
+                        <hr class="reveal-6" />
+                    </div>
+                    <div class="reveal">
+                        <h2 class="title-secondary reveal-translate reveal-2">STRATEGY</h2>
+                        <div class="section-text-content semi-left">
+                            Bring a global solution. Skill and equipment gathering through Joint-Venture and partnership. Every skill at the same place  (S&D, machining, garage, communication). Experts of their own branch clustering. Capitalize on French quality. Technical expertise & training center
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-accueil section-categories section-dark">
+                    <div class="section-content container">
+                        <hgroup>
+                            <h2 class="title-secondary title-secondary-tiny">OUR BUSINESS SECTOR</h2>
+                            <p class="section-content-text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                            </p>
+                        </hgroup>
+                        <nav class="categories-listing">
+                            <div class="category-item">
+                                <h3 class="category-item-title title-with-arrow-icon">
+                                    Disaster
+                                </h3>
+                                <ul class="reset-list category-item-list">
+                                    <li>
+                                        <a href="#" class="link-with-arrow white-arrow">Search system</a>
+                                        <a href="#" class="link-with-arrow white-arrow">Lifting bags</a>
+                                        <a href="#" class="link-with-arrow white-arrow">Shoring & stabilization</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="category-item">
+                                <h3 class="category-item-title title-with-arrow-icon">
+                                    Road Rescue
+                                </h3>
+                                <ul class="reset-list category-item-list">
+                                    <li>
+                                        <a href="#" class="link-with-arrow white-arrow">Our rescue tools</a>
+                                        <a href="#" class="link-with-arrow white-arrow">Optinal tools</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="category-item category-item-list">
+                                <h3 class="category-item-title title-with-arrow-icon">
+                                    Fire
+                                </h3>
+                                <ul class="reset-list category-item-list">
+                                    <li>
+                                        <a href="#" class="link-with-arrow white-arrow" >All products</a>
+                                        <a href="#" class="link-with-arrow white-arrow">Aquafast</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="category-item">
+                                <h3 class="category-item-title title-with-arrow-icon">
+                                    Breaching Tools
+                                </h3>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="section-content section-french-market container">
+                        <hgroup>
+                            <h2 class="title-secondary title-secondary-tiny">
+                                MARQUES DE DISTRIBUTION SUR LE MARCHÉ FRANÇAIS
+                            </h2>
+                            <p class="section-content-text">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                            </p>
+                        </hgroup>
+                        <div class="french-market-companies">
+                            <div class="french-market-company">
+                                <h3 class="title-with-arrow-icon">
+                                    SOFRAD FRANCE
+                                </h3>
+                                <div class="french-market-company-content">
+                                    <p class="section-online-information-text" >
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna                                    
+                                    </p>
+                                    <div class="french-market-company-link">
+                                        <a href="#" rel="" class="link-with-arrow" >WEBER RESCUE</a>
+                                        <a href="#" rel="" class="link-with-arrow" >SUPER VAC</a>
+                                        <a href="#" rel="" class="link-with-arrow" >PV STOP</a>
+                                        <a href="#" rel="" class="link-with-arrow" >TFT</a>
+                                        <a href="#" rel="" class="link-with-arrow" >LIFE LINE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="french-market-company">
+                                <h3 class="title-with-arrow-icon">
+                                    DECONTEX FRANCE
+                                </h3>
+                                <p class="section-online-information-text" >
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere mattis ligula eget volutpat. <br />
+                                </p>
+                                <div class="french-market-company-link">
+                                    <a href="#" rel="" class="link-with-arrow" >DÉCOUVRIR</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-accueil section-worldwide stripe-lines-section has-hero-slider">
+                    <section class="stripe-lines-wrapper container">
+                        <div class="stripe-line"></div>
+                        <div class="stripe-line"></div>
+                    </section>
+                    <section class="hero-content-wrapper"  >
+                        <div class="splide hero-slider-content strech-slider" id="slider-worldwide-text">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <div class="splide__slide hero-content-wrapper-item">
+                                        <hgroup class="hero-slider-title container">
+                                            <h2>
+                                                WE OFFER COMPLETE SOLUTION WORLD WIDE
+                                            </h2>
+                                            <p class="hero-slider-title-description" >
+                                                50% France / 50% exportation <br />
+                                                Involved in 40 countries
+                                            </p>
+                                        </hgroup>
+                                    </div>
+                                    <div class="splide__slide hero-content-wrapper-item">
+                                        <hgroup class="hero-slider-title container">
+                                            <h2>
+                                                WE OFFER COMPLETE SOLUTION WORLD WIDE <br>
+                                                (ASIA)
+                                            </h2>
+                                            <p class="hero-slider-title-description" >
+                                                50% France / 50% exportation <br />
+                                                Involved in 40 countries
+                                            </p>
+                                        </hgroup>
+                                    </div>
+                                    <div class="splide__slide hero-content-wrapper-item">
+                                        <hgroup class="hero-slider-title container">
+                                            <h2>
+                                                WE OFFER COMPLETE SOLUTION WORLD WIDE <br>
+                                                (CHINA)
+                                            </h2>
+                                            <p class="hero-slider-title-description" >
+                                                50% France / 50% exportation <br />
+                                                Involved in 40 countries
+                                            </p>
+                                        </hgroup>
+                                    </div>
+                                    <div class="splide__slide hero-content-wrapper-item">
+                                        <hgroup class="hero-slider-title container">
+                                            <h2>
+                                                WE OFFER COMPLETE SOLUTION WORLD WIDE <br>
+                                                (PHILLIPINES)
+                                            </h2>
+                                            <p class="hero-slider-title-description" >
+                                                50% France / 50% exportation <br />
+                                                Involved in 40 countries
+                                            </p>
+                                        </hgroup>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="hero-aside-controls container" >
+                            <ul class="hero-slider-pagination">
+                                <li class="hero-slider-pagination-item is-active" role="button">
+                                    <div class="hero-slider-pagination-item-progress">
+                                        <div class="hero-slider-pagination-item-progress-bar"></div>
+                                    </div>
+                                    <div class="hero-slider-pagination-item-text">
+                                        TURQUIE
+                                    </div>
+                                </li>
+                                <li class="hero-slider-pagination-item" role="button">
+                                    <div class="hero-slider-pagination-item-progress">
+                                        <div class="hero-slider-pagination-item-progress-bar"></div>
+                                    </div>
+                                    <div class="hero-slider-pagination-item-text">
+                                        ASIE
+                                    </div>
+                                </li>
+                                <li class="hero-slider-pagination-item" role="button">
+                                    <div class="hero-slider-pagination-item-progress">
+                                        <div class="hero-slider-pagination-item-progress-bar"></div>
+                                    </div>
+                                    <div class="hero-slider-pagination-item-text">
+                                        CHINE
+                                    </div>
+                                </li>
+                                <li class="hero-slider-pagination-item" role="button">
+                                    <div class="hero-slider-pagination-item-progress">
+                                        <div class="hero-slider-pagination-item-progress-bar"></div>
+                                    </div>
+                                    <div class="hero-slider-pagination-item-text">
+                                        PHILLIPINES
+                                    </div>
+                                </li>
+                        </aside>
+                    </section>
+                    <section id="slider-worldwide-background" class="worldwide-background hero-slider-backgrounds splide strech-slider" >
+                        <div class="splide__track">
+                            <div class="splide__list">
+                                <figure class="splide__slide hero-background-figure" >
+                                    <img class="" src="./images/worldwide/953a69e0-f8aa-441b-a87a-cc3d42f75144.jpg" width="1920" height="1080" alt="Text alt slide 1">
+                                </figure>
+                                <figure class="splide__slide hero-background-figure" >
+                                    <img class="" src="./images/worldwide/953a69e0-f8aa-441b-a87a-cc3d42f75144.jpg" width="1920" height="1080" alt="Text alt slide 1">
+                                </figure>
+                                <figure class="splide__slide hero-background-figure" >
+                                    <img class="" src="./images/worldwide/953a69e0-f8aa-441b-a87a-cc3d42f75144.jpg" width="1920" height="1080" alt="Text alt slide 1">
+                                </figure>
+                                <figure class="splide__slide hero-background-figure" >
+                                    <img class="" src="./images/worldwide/953a69e0-f8aa-441b-a87a-cc3d42f75144.jpg" width="1920" height="1080" alt="Text alt slide 1">
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="section section-accueil section-group-companies section-dark" >
+                    <div class="section-content container">
+                        <hgroup class="section-heading section-heading-row align-end">
+                            <h2 class="section-heading-title title-secondary">
+                                GROUP COMPANIES
+                            </h2>
+                            <p class="section-heading-text" >
+                                Son organisation transversale via différents filiales spécialisées permet une expertise tout en restant agile. Cette organisation, en interne, facilite le développement de chacune des sociétés et permet la réalisation d’un chiffre d’affaire de 
+                            </p>
+                        </hgroup>
+                        <section id="partner-slider" class="partner-slider splide slider-overflow-visible" aria-label="Liste de nos partenaires">
+                            <div class="splide__track">
+                                <ul class="splide__list partner-listing">
+                                    <li class="splide__slide partner-list-item">
+                                        <a href="" target="_blank" title="" class="partner-list-item-link">
+                                            <img class="partner-logo" src="./images/companies/le-tcs.svg" title="" width="200" height="50" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide partner-list-item">
+                                        <a href="" target="_blank" title="" class="partner-list-item-link">
+                                            <img class="partner-logo" src="./images/companies/sofrad-hse.svg" title="" width="200" height="50" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide partner-list-item">
+                                        <a href="" target="_blank" title="" class="partner-list-item-link">
+                                            <img class="partner-logo" src="./images/companies/aquafast.svg" title="" width="200" height="50" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide partner-list-item">
+                                        <a href="" target="_blank" title="" class="partner-list-item-link">
+                                            <img class="partner-logo" src="./images/companies/sofrad-france.svg" title="" width="200" height="50" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide partner-list-item">
+                                        <a href="" target="_blank" title="" class="partner-list-item-link">
+                                            <img class="partner-logo" src="./images/companies/colibrys.svg" title="" width="200" height="50" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide partner-list-item">
+                                        <a href="" target="_blank" title="" class="partner-list-item-link">
+                                            <img class="partner-logo" src="./images/companies/la-sucrerie-du-hameau.svg" title="" width="200" height="50" alt="" loading="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section class="section section-accueil section-online-demo section-content container">
+                    <hgroup class="section-heading section-heading-row align-center">
+                        <h2 class="section-heading-title title-secondary title-secondary-tiny">
+                            DEMO ONLINE
+                        </h2>
+                        <p class="section-heading-text" >
+                            Démarche RSE <br/>
+                            Infrastructures TCS
+                        </p>
+                    </hgroup>
+                    <div class="section-online-informations">
+                        <div class="section-online-information">
+                            <h3 class="title-with-arrow-icon">
+                                Live video demonstration
+                            </h3>
+                            <p class="section-online-information-text" >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere mattis ligula eget volutpat. <br />
+                            </p>
+                            <a href="#" rel="" class="link-with-arrow" >Take part in a live video</a>
+                        </div>
+                        <div class="section-online-information">
+                            <h3 class="title-with-arrow-icon">
+                                500m2 video studio
+                            </h3>
+                            <p class="section-online-information-text" >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere mattis ligula eget volutpat. <br />
+                            </p>
+                            <a href="#" rel="" class="link-with-arrow" >Find out more</a>
+                        </div>
+                    </div>
+                </section>
+                <footer class="footer section-dark">
+                    <section class="footer-content container">
+                        <div class="footer-content-row footer-content-row-grow">
+                            <p class="footer-keywords">
+                                INNOVATION <br />
+                                PRODUCTION <br />
+                                TEAM SPIRIT <br />
+                                GLOBAL PRESENCE
+                            </p>
+                            <a href="#" class="footer-logo">
+                                <img src="./images/logo-scorpe.svg" class="" width="207" height="37" loading="lazy" alt="Scorpe Technologie">
+                            </a>
+                        </div>
+                        <div class="footer-content-row">
+                            <h4 class="footer-content-title">
+                                Menu
+                            </h4>
+                            <ul class="footer-menu reset-list">
+                                <li>
+                                    <a href="#">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        About us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Our products
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Our trainings (TCS), and services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Photos in real life
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Demo online
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Faq
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Contact us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-content-row">
+                            <h4 class="footer-content-title">
+                                Contact Us
+                            </h4>
+                            <p>
+                                Le Hameau de la sucrerie,<br />
+                                5, Route de Laon<br />
+                                08190 Saint Germainmont <br />
+                                <br />
+                                Tel + 33 (0) 3 24 73 00 00<br />
+                                export@scorpe.eu
+                            </p>
+                        </div>
+                    </section>
+                    <section class="footer-navigation-wrapper container">
+                        <nav class="reset-list footer-navigation" >
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Mentions légales
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        @colibrys
+                                    </a>
+                                </li>
+                                <li>
+                                    All rights reserved SCORPE TECHNOLOGIES 
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="networks-list reset-list">
+                            <li>
+                                <a href="#" title="" class="network-item" >
+                                    Facebook
+                                    <svg class="icon">
+                                        <use xlink:href="./images/networks.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="" class="network-item" >
+                                    Instagram
+                                    <svg class="icon">
+                                        <use xlink:href="./images/networks.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="" class="network-item" >
+                                    Linkedin
+                                    <svg class="icon">
+                                        <use xlink:href="./images/networks.svg#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="" class="network-item" >
+                                    Youtube
+                                    <svg class="icon">
+                                        <use xlink:href="./images/networks.svg#youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="footer-rgpd-text container">
+                        Les informations recueillies sur ce formulaire sont enregistrées dans un fichier informatisé par COLIBRY’S afin de contacter les utilisateurs du site qui en font la demande. La base légale du traitement est le consentement. Les données collectées seront communiquées aux seuls destinataires suivants : Service marketing. Les données sont conservées pendant 24 mois. Vous pouvez accéder aux données vous concernant, les rectifier, demander leur effacement ou exercer votre droit à la limitation du traitement de vos données. Vous pouvez retirer à tout moment votre consentement au traitement de vos données.Vous pouvez également vous opposer au traitement de vos données. Vous pouvez également exercer votre droit à la portabilité de vos données. Consultez le site cnil.fr pour plus d'informations sur vos droits. Pour exercer ces droits ou pour toute question sur le traitement de vos données dans ce dispositif, vous pouvez contacter le service chargé de l'exercice de ces droits : hello@colibrys.fr ou au 06 72 45 93 45 Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL.
+                    </section>
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>

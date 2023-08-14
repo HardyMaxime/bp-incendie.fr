@@ -1,0 +1,103 @@
+.custom-button
+{
+    position: relative;
+    background: $primary;
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 16px 25px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 6px;
+    border: solid 1px $primary;
+    z-index: 1;
+    transition: color .3s ease, background .3s ease;
+    overflow: hidden;
+    color: $white;
+    font-family: $fontFamilySecondary;
+    text-transform: uppercase;
+
+    &:hover,
+    &.is-active
+    {
+        color: $primary;
+        background: transparent;
+    }
+
+    &.center 
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.custom-button-secondary
+    {
+        background: #C30161;
+        border: solid 1px #C30161;
+        padding: 20px 40px;
+
+        &:hover,
+        &.is-active
+        {
+            color: #C30161;
+            background: $white;
+        }
+    }
+}
+
+.custom-button.custom-button-admin
+{
+    padding: 10px;
+    opacity: .8;
+}
+
+.custom-button-huge
+{
+    padding-left: _rem(60px);
+    padding-right: _rem(60px);
+}
+
+.huge-button
+{
+    width: 100%;
+    color: #ffffff;
+    background: rgba($color: #FFFFFF, $alpha: .2);
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 35px;
+    border-radius: 45px;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+    line-height: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform .2s ease;
+
+    &::after
+    {
+        content: "";
+        display: block;
+        width: 21px;
+        height: 21px;
+        background : url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNCAyNS4yNDMiPgogIDxnIGlkPSJhcnJvdyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS41IDIuMTIxKSI+CiAgICA8cGF0aCBkPSJNNy41LDE4aDIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNy41IC03LjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8cGF0aCBkPSJNMTgsNy41LDI4LjUsMTgsMTgsMjguNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcuNSAtNy41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgogIDwvZz4KPC9zdmc+Cg==") no-repeat;
+        background-size: contain;
+        transition: transform .4s ease;
+    }
+
+    &:hover
+    {
+        transform: scale(1.01) translateY(-2px);
+        color: #fff !important;
+        &::after
+        {
+            transform: translateX(5px);
+        }
+    }
+
+    @media only screen and (max-width:$mobile)
+    {
+        font-size: 14px;
+        background: rgba($color: $primary, $alpha: .8);
+    }
+}

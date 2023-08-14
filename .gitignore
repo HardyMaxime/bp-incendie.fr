@@ -1,0 +1,68 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/themes/twentytwentythree/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+web/app/languages
+smush-webp
+
+static/node_modules
+static/dist
+.parcel-cache
+
+wp-content/cache
+!wp-content/uploads/wp-migrate-db/*
+
+node_modules
+
+# WordPress
+web/wp
+web/.htaccess
+
+.DS_Store
+.vscode
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+Makefile
+
+# Composer
+/vendor
+.DS_Store
+
+# WP-CLI
+wp-cli.local.yml
+
+dump.sql
+maquette
+maquette/*
+
+wp-config.php
+BackupController.php

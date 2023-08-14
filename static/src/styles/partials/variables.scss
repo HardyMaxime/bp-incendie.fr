@@ -1,0 +1,39 @@
+$dark: #141414;
+$white: #FFFFFF;
+
+$background: $white;
+$backgroundSecondary: #FBFBFB;
+$backgroundLine : rgba($color: #FFFFFF, $alpha: .2);
+
+$color: $dark;
+$colorSecondary : $white;
+$primary :#97D246;
+$secondary : #B6C2B0;
+
+$section-mobile-padding : 60px;
+
+$topbarHeight : 90px;
+$topbarHeightMobile : 90px;
+$mobileInformations : 75px;
+
+$containerPadding: 20px;
+$container: calc(1400px + ($containerPadding * 2));
+$containerFluid : calc(1640px + ($containerPadding * 2));
+
+$fontFamily : "IBM Plex Sans", sans-serif;
+$fontFamilySecondary:"IBM Plex Sans", sans-serif;
+$fontSize : 20px;
+$fontSizeMobile : 16px;
+
+$lineHeight: 1.5;
+$lineHeightMobile: $lineHeight;
+
+$paddingMobile : 20px;
+
+$extraMobile: 600px;
+$mobile : 900px;
+$tablet : 1190px;
+$desktop : 1360px;
+$large : 1850px;
+
+$menu-width : 745px;

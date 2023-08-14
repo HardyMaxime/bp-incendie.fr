@@ -1,0 +1,148 @@
+/* Variables
+========================================================================== */
+@import "partials/fonts";
+@import "partials/variables";
+
+/* Helpers & librairie
+========================================================================== */
+@import "partials/helpers";
+
+/* Reset 
+========================================================================== */
+@import "partials/resets";
+
+html 
+{
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $color;
+    font-weight: 400;
+    height: -webkit-fill-available;
+    scroll-behavior: smooth;
+    height: 100%;
+    scroll-padding-top: $topbarHeight;
+
+    @media only screen and (min-width:2200px)
+    {
+        font-size: 25px;
+    }
+}
+
+body
+{
+    background: $background;
+    overflow-x: hidden;
+    height:100%;
+
+    &.menu-is-open
+    {
+        overflow: hidden;
+    }
+
+    /*
+    &.is-admin
+    {
+        margin-top: 40px;
+    }
+    */
+}
+
+body.menu-is-open,
+body.popup-open
+{
+    overflow: hidden;
+}
+
+main.main
+{
+    position: relative;
+    width: 100%;
+    //height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .is-page &
+    {
+        height: 100%;
+    }
+}
+
+.container
+{
+    max-width: $container;
+    padding: 0 $containerPadding;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media only screen and (min-width:2200px)
+    {
+        max-width: 2000px;
+    }
+}
+
+.container-fluid
+{
+    max-width: 2000px;
+    padding: 0 30px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media only screen and (max-width:$mobile)
+    {
+        padding: 0 $containerPadding;
+    }
+}
+
+.preload-transitions .form-background
+{
+    // Dry this up a bit with SCSS variable
+    $null-transition: none !important;
+
+    -webkit-transition: $null-transition;
+    -moz-transition: $null-transition;
+    -ms-transition: $null-transition;
+    -o-transition: $null-transition;
+    transition: $null-transition;
+}
+
+strong
+{
+    font-weight: 700;
+}
+
+body .margin-top
+{
+    margin-top: -100px;
+    padding-top: 0;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+    body {
+        /* The hack for Safari */
+        min-height: -webkit-fill-available;
+    }
+}
+
+@media only screen and (max-width:$mobile)
+{
+    html 
+    {
+        font-size: $fontSizeMobile;
+        line-height: $lineHeightMobile;
+    }
+
+}
+
+/* Import
+========================================================================== */
+
+   @import "partials/404.scss";
+   @import "partials/buttons.scss";
+   @import "partials/default.scss";
+   @import "partials/heading.scss";
+   @import "partials/animation.scss";
+   @import "partials/section.scss";

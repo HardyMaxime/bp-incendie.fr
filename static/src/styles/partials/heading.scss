@@ -1,0 +1,138 @@
+.title-secondary
+{
+    @include fontSize(100px);
+    font-weight: 200;
+    line-height: 1;
+
+    &.title-secondary-tiny
+    {
+        @include fontSize(80px);
+    }
+
+    @media only screen and (min-width:$tablet)
+    {
+        @include fontSize(120px);
+
+        &.title-secondary-tiny
+        {
+            @include fontSize(100px);
+        }
+    }
+
+    @media only screen and (min-width:$large)
+    {
+        @include fontSize(140px);
+
+        &.title-secondary-tiny
+        {
+            @include fontSize(120px);
+        }
+    }
+
+    @media only screen and (max-width:$mobile)
+    {
+        @include fontSize(60px);
+
+        &.title-secondary-tiny
+        {
+            @include fontSize(50px);
+        }
+    }
+}
+
+.title-ternary
+{
+    @include fontSize(36px);
+    font-weight: 500;
+    line-height: 1.16;
+}
+
+.section-heading
+{
+    margin-bottom: _rem(100px);
+    &.no-margin-bottom
+    {
+        margin-bottom: 0;
+    }
+    .section-title
+    {
+        text-transform: uppercase;
+    }
+
+    .section-subtitle
+    {
+        max-width: 420px;
+        margin-left: auto;
+        margin-top: 50px;
+
+        &.section-subtitle-full
+        {
+            max-width: 1040px;
+        }
+
+        &.section-subtitle-full-left
+        {
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width:$mobile)
+{
+    .title-secondary
+    {
+        @include fontSize(60px);
+    }
+
+    .title-ternary
+    {
+        @include fontSize(22px);
+    }
+
+    .title-with-arrow-icon
+    {
+        @include fontSize(26px);
+        justify-content: center;
+    }
+
+    .section-heading-row
+    {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+
+        .section-heading-title
+        {
+            max-width: 775px;
+            width: 100%;
+        }
+
+        .section-heading-text
+        {
+            max-width: 420px;
+            width: 100%;
+        }
+    }
+
+    .section-heading
+    {
+        margin-bottom: $section-mobile-padding;
+        &.no-margin-bottom
+        {
+            margin-bottom: 0;
+        }
+        .section-title
+        {
+            text-align: center;
+        }
+
+        .section-subtitle
+        {
+            margin-right: auto;
+            margin-top: 30px;
+            text-align: center;
+        }
+    }
+}
