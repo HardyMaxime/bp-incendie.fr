@@ -20,7 +20,6 @@ class DefaultController
     {
         $frontid = get_option('page_on_front');
         self::setFrontID($frontid);
-        add_action( 'admin_init', [$this, 'clbs_hide_editor'] );
         add_filter( 'page_template', array($this, 'clbs_custom_hierarchy_template') );
     }
 
