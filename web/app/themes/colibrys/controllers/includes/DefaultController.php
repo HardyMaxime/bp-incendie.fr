@@ -24,15 +24,6 @@ class DefaultController
         add_filter( 'page_template', array($this, 'clbs_custom_hierarchy_template') );
     }
 
-    public static function clbs_hide_editor()
-    {
-        $post_id = (isset($_GET['post']) ? $_GET['post'] : false);
-        if( !( $post_id ) ) return;
-        if(in_array($post_id, self::getPageIDOfCustomizePage())) {
-            remove_post_type_support('page', 'editor');
-        }
-    }
-
     public static function clbs_custom_hierarchy_template($template)
     {
         global $post;
@@ -97,10 +88,6 @@ class DefaultController
 
         if(is_page('contact')) {
             $bodyClass[] = "page-contact";
-        }
-
-        if(self::isNavbarStatic()) {
-            $bodyClass[] = "static-navbar";
         }
 
         return $bodyClass;
