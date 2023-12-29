@@ -39,7 +39,6 @@ node_modules
 
 # WordPress
 web/wp
-web/.htaccess
 
 .DS_Store
 .vscode
