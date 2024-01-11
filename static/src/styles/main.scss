@@ -22,11 +22,6 @@ html
     scroll-behavior: smooth;
     height: 100%;
     scroll-padding-top: $topbarHeight;
-
-    @media only screen and (min-width:2200px)
-    {
-        font-size: 25px;
-    }
 }
 
 body
@@ -39,13 +34,6 @@ body
     {
         overflow: hidden;
     }
-
-    /*
-    &.is-admin
-    {
-        margin-top: 40px;
-    }
-    */
 }
 
 body.menu-is-open,
@@ -61,11 +49,6 @@ main.main
     //height: 100%;
     display: flex;
     flex-direction: column;
-
-    .is-page &
-    {
-        height: 100%;
-    }
 }
 
 .container
@@ -75,25 +58,15 @@ main.main
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
-    @media only screen and (min-width:2200px)
-    {
-        max-width: 2000px;
-    }
 }
 
 .container-fluid
 {
-    max-width: 2000px;
-    padding: 0 30px;
+    max-width: $containerFluid;
+    padding: 0 $containerPadding;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
-    @media only screen and (max-width:$mobile)
-    {
-        padding: 0 $containerPadding;
-    }
 }
 
 .preload-transitions .form-background
