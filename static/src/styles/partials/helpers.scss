@@ -1,11 +1,17 @@
-@function _rem($size) {
+@function _rem($size, $fontSize : $fontSize) {
     $remSize: calc($size / $fontSize);
     @return #{$remSize}rem;
 }
 
 @mixin fontSize($size) {
-    font-size: $size;
-    font-size: _rem($size);
+    font-size: $size; // Définir la taille de police normale
+
+    @media screen and (max-width: $mobile) {
+        font-size: _rem($size, $fontSizeMobile); // Convertir la taille de police en rem pour mobile
+    }
+    @media screen and (min-width: $mobile) {
+        font-size: _rem($size, $fontSize); // Convertir la taille de police en rem pour desktop
+    }
 }
 
 .text-align-center
@@ -216,6 +222,23 @@ figure.no-padding
 .text-ident
 {
     text-indent:-10000px;
+}
+
+.color-primary
+{
+    color: $primary !important;
+}
+
+@for $i from 1 through 10 {
+    .mt-#{$i} {
+      margin-top: $i * 10px;
+    }
+}
+
+@for $i from 1 through 10 {
+    .mb-#{$i} {
+      margin-bottom: $i * 10px;
+    }
 }
 
 @media only screen and (max-width: $mobile)
