@@ -108,6 +108,36 @@ class DefaultController
     }
 
     /**
+     * Renvoie l'url de la favion déjà echappée 
+     * @return array|string URL de la favicon et le type
+     */
+    public static function getFavicon(string $param = ""): array|string
+    {
+        $array = array();
+        if(function_exists('get_site_icon_url') && !empty(get_site_icon_url()))
+        {
+            $array = [
+                "url" => esc_url(get_site_icon_url()),
+                "type" => esc_attr("image/jpg")
+            ];
+        }
+        else
+        {
+            $array =  [
+                "url" => esc_url( get_template_directory_uri().'/assets/favicon.png'),
+                "type" => esc_attr("image/png")
+            ];
+        }
+
+        if(!empty($param) && array_key_exists($param, $array))
+        {
+            return $array[$param];
+        }
+
+        return $array;
+    }
+
+    /**
      * Retourne le contenu d'un champ ACF ou un champ personnalisé
      * @param string $field Nom du champ
      * @param string $id ID de la page
