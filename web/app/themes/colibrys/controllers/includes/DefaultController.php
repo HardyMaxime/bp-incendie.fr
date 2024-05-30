@@ -217,6 +217,4 @@ class DefaultController
         echo '</ul>';
         echo '</nav>';
     }
-
-
 }

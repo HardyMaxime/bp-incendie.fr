@@ -8,6 +8,8 @@ web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
 
+indexnow
+
 # WordPress
 web/wp
 web/.htaccess
