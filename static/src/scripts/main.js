@@ -1,6 +1,7 @@
 import './../styles/main.scss'; 
 import { triggerRevealScroll } from './partials/scroll-reveal';
 import { preloadTransition } from './partials/preload-transition';
+import { initCookieConsent } from './partials/cookie-consent';
 //import { initExemple } from './partials/exemple';
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -15,5 +16,6 @@ window.addEventListener('DOMContentLoaded', function() {
         preloadTransition();
     }, 100);
 
+    initCookieConsent();
     //initExemple();
 });

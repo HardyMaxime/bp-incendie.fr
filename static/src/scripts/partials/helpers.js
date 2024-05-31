@@ -1,4 +1,3 @@
-
 export function throttle(callback, delay) {
     var last;
     var timer;
