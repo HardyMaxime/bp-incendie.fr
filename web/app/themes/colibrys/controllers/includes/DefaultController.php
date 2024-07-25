@@ -118,7 +118,7 @@ class DefaultController
         {
             $array = [
                 "url" => esc_url(get_site_icon_url()),
-                "type" => esc_attr("image/jpg")
+                "type" => esc_attr(wp_get_image_mime(wp_get_original_image_path(get_option( 'site_icon' ))))
             ];
         }
         else
