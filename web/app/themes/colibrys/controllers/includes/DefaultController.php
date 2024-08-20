@@ -179,6 +179,16 @@ class DefaultController
         }
     }
 
+    /**
+     *  Retourne l'url de l'image
+     *  @param string $path Chemin de l'image ou nom de l'image
+     *  @return string URL de l'image echappée
+    */
+    public static function assets(string $path): string
+    {
+        return esc_url(get_template_directory_uri() . '/assets/' . $path);
+    }
+
     public static function changeWpQuery(WP_Query $query): WP_Query
     {
         global $wp_query;

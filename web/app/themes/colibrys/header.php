@@ -14,6 +14,5 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(DefaultController::generateBodyClass()); ?> >
-        <div class="fix-overflow">
-            <main role="main" class="main" >
-                <?php get_template_part("parts/accueil/welcome"); ?>
+        <main role="main" class="main" >
+            <?php get_template_part("parts/accueil/welcome"); ?>
