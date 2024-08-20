@@ -1,48 +1,48 @@
 .title-secondary
 {
-    @include fontSize(100px);
+    @include fontsize(100px);
     font-weight: 200;
     line-height: 1;
 
     &.title-secondary-tiny
     {
-        @include fontSize(80px);
+        @include fontsize(80px);
     }
 
     @media only screen and (min-width:$tablet)
     {
-        @include fontSize(120px);
+        @include fontsize(120px);
 
         &.title-secondary-tiny
         {
-            @include fontSize(100px);
+            @include fontsize(100px);
         }
     }
 
     @media only screen and (min-width:$large)
     {
-        @include fontSize(140px);
+        @include fontsize(140px);
 
         &.title-secondary-tiny
         {
-            @include fontSize(120px);
+            @include fontsize(120px);
         }
     }
 
     @media only screen and (max-width:$mobile)
     {
-        @include fontSize(60px);
+        @include fontsize(60px);
 
         &.title-secondary-tiny
         {
-            @include fontSize(50px);
+            @include fontsize(50px);
         }
     }
 }
 
 .title-ternary
 {
-    @include fontSize(36px);
+    @include fontsize(36px);
     font-weight: 500;
     line-height: 1.16;
 }
@@ -81,17 +81,17 @@
 {
     .title-secondary
     {
-        @include fontSize(60px);
+        @include fontsize(60px);
     }
 
     .title-ternary
     {
-        @include fontSize(22px);
+        @include fontsize(22px);
     }
 
     .title-with-arrow-icon
     {
-        @include fontSize(26px);
+        @include fontsize(26px);
         justify-content: center;
     }
 

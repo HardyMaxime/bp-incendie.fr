@@ -3,7 +3,7 @@
     @return #{$remSize}rem;
 }
 
-@mixin fontSize($size) {
+@mixin fontsize($size) {
     font-size: $size; // Définir la taille de police normale
 
     @media screen and (max-width: $mobile) {
