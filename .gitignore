@@ -52,6 +52,7 @@ web/wp
 .env
 .env.*
 !.env.example
+Makefile
 
 # Composer
 /vendor
