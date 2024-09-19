@@ -1,5 +1,6 @@
 import legacy from '@vitejs/plugin-legacy'
 import { defineConfig } from 'vite'
+import nunjucks from 'vite-plugin-nunjucks'
 
 const THEME = "colibrys";
 
@@ -8,13 +9,9 @@ export default defineConfig({
     root: './src',
     build: {
         outDir: '../../web/app/themes/'+THEME+'/assets/ressources/',
-        assetsDir: '', // Leave `assetsDir` empty so that all static resources are placed in the root of the `dist` folder.
+        assetsDir: '',
         assetsInlineLimit: 0,
         rollupOptions: {
-            //input: {
-                // Uncomment if you need to specify entry points for .html files
-                //index: resolve(__dirname, 'index.html'),
-            //},
             output: {
                 entryFileNames: `scripts/[name].js`,
                 chunkFileNames: `scripts/[name].js`,
@@ -41,6 +38,7 @@ export default defineConfig({
     plugins: [
         legacy({
             targets: ['defaults', 'not IE 11']
-        })
+        }),
+        nunjucks()
     ],
 });
