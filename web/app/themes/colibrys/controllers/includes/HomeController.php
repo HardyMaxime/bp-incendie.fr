@@ -1,7 +1,5 @@
 <?php
 
-namespace App\controllers\includes;
-
 class HomeController
 {
     private static $_instance; // L'attribut qui stockera l'instance unique

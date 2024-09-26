@@ -1,7 +1,5 @@
 <?php
 
-namespace App\controllers\includes;
-
 class DefaultController 
 {
     protected static $frontID;
