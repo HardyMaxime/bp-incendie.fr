@@ -92,22 +92,18 @@ class DefaultController
         return $bodyClass;
     }
 
-    public static function getPostThumbnail(string $image_id, string $params = null): array|string
+    public static function getPostThumbnailAttribut(string $image_id, string $params = ""): array|string
     {
-        // Récupérer les informations de l'image
-        $image_src = wp_get_attachment_image_src($image_id, 'full');
-
-        // Générer les attributs
         $attributs = array(
-            'url' => $image_src ? esc_url($image_src[0]) : esc_url(self::assets('images/default.jpg')),
-            'alt' => get_post_meta($image_id, '_wp_attachment_image_alt', true) ? esc_attr(get_post_meta($image_id, '_wp_attachment_image_alt', true)) : esc_attr(get_bloginfo('name')),
-            'title' => get_the_title($image_id) ?: esc_attr(get_bloginfo('name')),
+            'alt' => get_post_meta( $image_id, '_wp_attachment_image_alt', true ),
+            'title' => get_the_title($image_id)
         );
-        // Si un paramètre spécifique est demandé
-        if (!empty($params) && isset($attributs[$params])) {
+
+        if(!empty($params) && array_key_exists($params, $attributs))
+        {
             return $attributs[$params];
         }
-        // Retourner tous les attributs par défaut
+
         return $attributs;
     }
 
