@@ -25,6 +25,13 @@
                         label: 'Nom du bouton',
                         minWidth: 500,
                         value: ''
+                      },
+                      {
+                        type: 'checkbox',
+                        name: 'target',
+                        label: 'Ourvrir dans une nouvelle fenetre',
+                        minWidth: 500,
+                        value: ''
                       }
                     ],
                     buttons: [
@@ -43,9 +50,10 @@
                         }
                       ],
                     onsubmit: function(e){
-                        var returnText = '<a href='+ e.data.url +' class="link-with-arrow" target="_blank" rel="noopener" >'+ e.data.name +'</a>';
+                        var target = (e.data.target ? '_blank' : '');
+                        var returnText = '<a href="' + e.data.url + '" class="btn" target="' + target + '" rel="noopener">' + e.data.name + '</a>';
                         ed.execCommand('mceInsertContent', 0, returnText);
-                      }
+                    }
                 });
             });
         },
