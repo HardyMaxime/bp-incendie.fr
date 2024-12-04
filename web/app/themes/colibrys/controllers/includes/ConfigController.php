@@ -59,9 +59,7 @@ class ConfigController extends AbstractController
     public static function generateBodyClass(): array
     {
         $bodyClass = [];
-        if (is_front_page()) {
-            $bodyClass[] = "is-accueil";
-        }
+
         if(current_user_can('administrator')) {
             $bodyClass[] = "is-admin";
         }
