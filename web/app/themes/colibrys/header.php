@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo get_bloginfo('name'); ?></title>
         <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
-        <link rel="icon" type="<?= DefaultController::getFavicon("type"); ?>" href="<?= DefaultController::getFavicon("url"); ?>" />
+        <link rel="icon" type="<?= ConfigController::getFavicon("type"); ?>" href="<?= ConfigController::getFavicon("url"); ?>" />
         <?php site::generatePreload(); ?>
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(DefaultController::generateBodyClass()); ?> >
+    <body <?php body_class(ConfigController::generateBodyClass()); ?> >
         <main role="main" class="main" >
             <?php get_template_part("parts/accueil/welcome"); ?>
