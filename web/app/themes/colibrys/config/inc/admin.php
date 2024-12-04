@@ -7,6 +7,7 @@ class Admin
     public function __construct()
     {
         add_action('admin_menu', [$this, 'remove_pages_in_admin']);
+        add_action('admin_bar_menu', [$this, "remove_customize_button"], 999);
         ///add_filter('acf/settings/show_admin', [$this, 'hide_acf_menu']);
         //add_filter('rest_authentication_errors', [$this, 'disable_rest_api']);
     }
@@ -24,8 +25,10 @@ class Admin
 
     public function remove_pages_in_admin()
     {
-        remove_menu_page("edit.php");
+        //remove_menu_page("edit.php");
         remove_menu_page("edit-comments.php");
+        remove_submenu_page('themes.php', 'site-editor.php?path=/patterns');
+        remove_submenu_page('themes.php', 'customize.php?return=%2Fwp%2Fwp-admin%2F');
         //remove_menu_page("backwpup");
         //remove_menu_page('complianz');
     }
@@ -49,5 +52,13 @@ class Admin
     public function hide_acf_menu()
     {
         return false;
+    }
+
+    public function remove_customize_button($wp_admin_bar)
+    {
+        $wp_admin_bar->remove_node('comments');
+        $wp_admin_bar->remove_node('customize');
+        $wp_admin_bar->remove_node('new-content');
+        $wp_admin_bar->remove_node('updates');
     }
 }

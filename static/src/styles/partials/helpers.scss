@@ -1,5 +1,5 @@
-@function _rem($size, $fontSize : $fontSize) {
-    $remSize: calc($size / $fontSize);
+@function _rem($size, $font-size : $font-size) {
+    $remSize: calc($size / $font-size);
     @return #{$remSize}rem;
 }
 
@@ -7,11 +7,30 @@
     font-size: $size; // Définir la taille de police normale
 
     @media screen and (max-width: $mobile) {
-        font-size: _rem($size, $fontSizeMobile); // Convertir la taille de police en rem pour mobile
+        font-size: _rem($size, $font-size-mobile); // Convertir la taille de police en rem pour mobile
     }
     @media screen and (min-width: $mobile) {
-        font-size: _rem($size, $fontSize); // Convertir la taille de police en rem pour desktop
+        font-size: _rem($size, $font-size); // Convertir la taille de police en rem pour desktop
     }
+}
+
+@mixin lineheight($size) {
+    line-height: $size; // Définir la hauteur de ligne normale
+
+    @media screen and (max-width: $mobile) {
+        line-height: _rem($size, $font-size-mobile); // Convertir la hauteur de ligne en rem pour mobile
+    }
+    @media screen and (min-width: $mobile) {
+        line-height: _rem($size, $font-size); // Convertir la hauteur de ligne en rem pour desktop
+    }
+}
+
+@function vw($px-value, $viewport-width: 1920) {
+    @return calc($px-value / $viewport-width) * 100 + vw;
+}
+
+@function vh($px-value, $viewport-height: 1080) {
+    @return calc($px-value / $viewport-height) * 100 + vh;
 }
 
 .text-align-center
@@ -31,6 +50,7 @@
     align-items: center;
 }
 
+img.cover,
 .stretch-img
 {
     width: 100%;

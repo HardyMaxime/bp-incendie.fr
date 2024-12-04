@@ -2,35 +2,31 @@ $dark: #141414;
 $white: #FFFFFF;
 
 $background: $white;
-$backgroundSecondary: #FBFBFB;
-$backgroundLine : rgba($color: #FFFFFF, $alpha: .2);
+$background-secondary: #FBFBFB;
 
 $color: $dark;
-$colorSecondary : $white;
+$color-secondary : $white;
 $primary :#97D246;
 $secondary : #B6C2B0;
 
 $section-mobile-padding : 60px;
 
-$topbarHeight : 90px;
-$topbarHeightMobile : 90px;
-$mobileInformations : 75px;
+$topbar-height : 90px;
+$topbar-height-mobile : 90px;
 
-$containerPadding: 20px;
-$container: calc(1400px + ($containerPadding * 2));
-$containerFluid : calc(1640px + ($containerPadding * 2));
+$container-padding: 20px;
+$container: calc(1400px + ($container-padding * 2));
+$containerFluid : calc(1640px + ($container-padding * 2));
 
-$fontFamily : "IBM Plex Sans", sans-serif;
-$fontFamilySecondary:"IBM Plex Sans", sans-serif;
-$fontSize : 20px;
-$fontSizeMobile : 16px;
+$font-family : "Helvitica", sans-serif;
+$font-family-secondary: "Helvitica", sans-serif;
+$font-size : 20px;
+$font-size-mobile : 16px;
 
-$lineHeight: 1.5;
-$lineHeightMobile: $lineHeight;
+$line-height: 1.5;
+$line-height-mobile: $line-height;
 
-$paddingMobile : 20px;
-
-$extraMobile: 600px;
+$extra: 600px;
 $mobile : 900px;
 $tablet : 1190px;
 $desktop : 1360px;

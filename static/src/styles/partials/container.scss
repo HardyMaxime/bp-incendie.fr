@@ -1,0 +1,25 @@
+.container
+{
+    width: 100%;
+    padding-left: calc(50% - ($container-size / 2));
+    padding-right: calc(50% - ($container-size / 2));
+
+    @media only screen and (max-width: $container-size)
+    {
+        padding-left: $container-padding;
+        padding-right: $container-padding;
+    }
+}
+
+.container-fluid
+{
+    width: 100%;
+    padding-left: calc(50% - ($container-fluid-size / 2));
+    padding-right: calc(50% - ($container-fluid-size / 2));
+
+    @media only screen and (max-width: $container-fluid-size)
+    {
+        padding-left: $container-padding;
+        padding-right: $container-padding;
+    }
+}

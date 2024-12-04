@@ -1,6 +1,6 @@
 <?php
 // Gerer les formats d'images
-require_once('supports/images.php');
+require_once('images.php');
 
 class Supports
 {

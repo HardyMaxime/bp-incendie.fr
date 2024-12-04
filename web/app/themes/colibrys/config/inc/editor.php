@@ -10,6 +10,7 @@ class Editor
         add_filter('tiny_mce_before_init', [$this,'clbs_mce_text_sizes']);
         add_filter('tiny_mce_before_init', [$this,'clbs_clean_copy_paste_editor']);
         add_action( 'init', [$this,'clbs_tiny_mce_link_buttons'] );
+        remove_filter('the_content', 'wpautop');
     }
 
     /**

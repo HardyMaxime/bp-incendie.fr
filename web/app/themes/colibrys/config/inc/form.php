@@ -12,6 +12,7 @@ class Form
             add_filter( 'wpcf7_load_js', '__return_false' );
             add_action( 'wpcf7_init', [$this,'clbs_custom_add_form_tag_urlrgpd'] );
             add_filter('wpcf7_form_elements', [$this,'clbs_clean_form_content'] );
+            add_filter('wpcf7_form_tag', [$this, 'populate_page_id_field']);
         }
     }
 
@@ -29,7 +30,9 @@ class Form
     // Ajouter le fichier RGPD (A creer via ACF avec le nom "file_rgpd")
     public function clbs_custom_add_form_tag_urlrgpd() {
         wpcf7_add_form_tag( 'urlrgpd', function($tag){
-            $url_rgpd_file = (get_field("file_rgpd","option") ? esc_url(get_field("file_rgpd","option")['url']) : "#");
+            //$page_id = "option";
+            $page_id = Helpers::get_id_by_slug(Helpers::get_contact_slug());
+            $url_rgpd_file = (get_field("file_rgpd",$page_id) ? esc_url(get_field("file_rgpd",$page_id)['url']) : "#");
             return $url_rgpd_file;
         });
     }
@@ -43,5 +46,13 @@ class Form
         $content = str_replace('<p>', '', $content);
         $content = str_replace('</p>', '', $content);
         return $content;
+    }
+
+    public function populate_page_id_field($tag)
+    {
+        if ($tag['name'] === 'current_page_id') {
+            $tag['values'] = array(get_the_ID());
+        }
+        return $tag;
     }
 }

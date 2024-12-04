@@ -1,6 +1,6 @@
 <?php
 
-class DefaultController 
+class ConfigController extends AbstractController
 {
     protected static $frontID;
     private static $_instance; // L'attribut qui stockera l'instance unique
@@ -11,15 +11,13 @@ class DefaultController
     public static function getInstance()
     {
         if (is_null(self::$_instance)) {
-            self::$_instance = new DefaultController();
+            self::$_instance = new ConfigController();
         }
         return self::$_instance;
     }
 
     public function __construct()
     {
-        $frontid = get_option('page_on_front');
-        self::setFrontID($frontid);
         add_filter( 'page_template', array($this, 'clbs_custom_hierarchy_template') );
     }
 
@@ -44,23 +42,6 @@ class DefaultController
             if ($child_template) return $child_template;
         }
         return $template;
-    }
-
-    /**
-     *  Setter de l'ID de la page d'accueil
-     */
-    public static function setFrontID(string $id)
-    {
-        self::$frontID = $id;
-    }
-
-    /**
-     * Retourne l'ID de la page d'accueil
-     * @return string
-     */
-    public static function getFrontID(): string
-    {
-        return self::$frontID;
     }
 
     /**
@@ -92,21 +73,6 @@ class DefaultController
         return $bodyClass;
     }
 
-    public static function getPostThumbnailAttribut(string $image_id, string $params = ""): array|string
-    {
-        $attributs = array(
-            'alt' => get_post_meta( $image_id, '_wp_attachment_image_alt', true ),
-            'title' => get_the_title($image_id)
-        );
-
-        if(!empty($params) && array_key_exists($params, $attributs))
-        {
-            return $attributs[$params];
-        }
-
-        return $attributs;
-    }
-
     /**
      * Renvoie l'url de la favion déjà echappée 
      * @return array|string URL de la favicon et le type
@@ -135,71 +101,6 @@ class DefaultController
         }
 
         return $array;
-    }
-
-    /**
-     * Retourne le contenu d'un champ ACF ou un champ personnalisé
-     * @param string $field Nom du champ
-     * @param string $id ID de la page
-     */
-    public static function field_value($field, $id = "")
-    {
-        // Si ACF est installé
-        if(empty($id)) $id = get_the_ID();
-        if(function_exists('get_field'))
-        {
-            return get_field($field, $id);
-        }
-        return get_post_meta($id, $field, true);
-    }
-
-    /**
-     * Retourne le contenu d'un champ ou une chaine vide si le champ est vide
-     * @param string $field Nom du champ
-     * @param string $id ID de la page
-     * @param string $return_value Valeur de retour si le champ est vide
-     */
-    public static function get_field_or_empty($field, $id, $return_value = "") {
-        $value = self::field_value($field, $id);
-        return empty($value) ? $return_value : $value;
-    }
-
-    /**
-     * Vérifie si le paramètre existe dans le tableau et le retourne
-     * @param string $param Nom du paramètre
-     * @param array $array Tableau de paramètres
-     */
-    public static function check_array_param($param, $array)
-    {
-        if(!empty($param) && array_key_exists($param, $array))
-        {
-            return $array[$param];
-        }
-    }
-
-    /**
-     *  Retourne l'url de l'image
-     *  @param string $path Chemin de l'image ou nom de l'image
-     *  @return string URL de l'image echappée
-    */
-    public static function assets(string $path): string
-    {
-        return esc_url(get_template_directory_uri() . '/assets/' . $path);
-    }
-
-    public static function changeWpQuery(WP_Query $query): WP_Query
-    {
-        global $wp_query;
-        $tmp_query = $wp_query;
-        $wp_query = $query;
-
-        return $tmp_query;
-    }
-
-    public static function resetWpQuery(WP_Query $query): void
-    {
-        global $wp_query;
-        $wp_query = $query;
     }
 
     public static function clbs_pagination(string $paged)
