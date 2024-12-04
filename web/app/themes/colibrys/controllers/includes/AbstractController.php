@@ -3,25 +3,6 @@
 abstract class AbstractController 
 {
     protected static $frontID;
-    private static $_instance; // L'attribut qui stockera l'instance unique
-
-    /**
-    * La méthode statique qui permet d'instancier ou de récupérer l'instance unique
-    **/
-    public static function getInstance()
-    {
-        if (is_null(self::$_instance)) {
-            self::$_instance = new AbstractController();
-        }
-        return self::$_instance;
-    }
-
-    public function __construct()
-    {
-        $frontid = get_option('page_on_front');
-        self::setFrontID($frontid);
-    }
-
     /**
      *  Setter de l'ID de la page d'accueil
      */
