@@ -1,33 +1,43 @@
 /* Variables
 ========================================================================== */
-@import "partials/fonts";
-@import "partials/variables";
+@use "partials/fonts" as *;
+@use "partials/variables" as vars;
 
 /* Helpers & librairie
 ========================================================================== */
-@import "partials/helpers";
-@import "partials/lib/index.scss";
+@use "partials/lib/index.scss" as lib;
 
-/* Reset 
+/* Default
 ========================================================================== */
-@import "partials/resets";
+@use "partials/resets" as resets;
+@use "partials/404.scss" as notFound;
+@use "partials/buttons.scss" as buttons;
+@use "partials/heading.scss" as headings;
+@use "partials/container.scss" as container;
+@use "partials/sections/index.scss" as sections;
+@use "partials/pages/index.scss" as pages;
+@use "partials/animations/index.scss" as animations;
+
+/* Import
+========================================================================== */
+
 
 html 
 {
-    font-family: $font-family;
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $color;
+    font-family: vars.$font-family;
+    font-size: vars.$font-size;
+    line-height: vars.$line-height;
+    color: vars.$color;
     font-weight: 400;
     height: -webkit-fill-available;
     scroll-behavior: smooth;
     height: 100%;
-    scroll-padding-top: $topbar-height;
+    scroll-padding-top: vars.$topbar-height;
 }
 
 body
 {
-    background: $background;
+    background: vars.$background;
     overflow-x: hidden;
     height:100%;
 
@@ -60,21 +70,11 @@ main.main
     }
 }
 
-@media only screen and (max-width:$mobile)
+@media only screen and (max-width:vars.$mobile)
 {
-    html 
+    html
     {
-        font-size: $font-size-mobile;
-        line-height: $line-height-mobile;
+        font-size: vars.$font-size-mobile;
+        line-height: vars.$line-height-mobile;
     }
 }
-
-/* Import
-========================================================================== */
-
-   @import "partials/404.scss";
-   @import "partials/buttons.scss";
-   @import "partials/default.scss";
-   @import "partials/heading.scss";
-   @import "partials/animation.scss";
-   @import "partials/section.scss";

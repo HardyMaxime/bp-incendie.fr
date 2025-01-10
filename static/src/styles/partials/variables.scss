@@ -13,10 +13,13 @@ $section-mobile-padding : 60px;
 
 $topbar-height : 90px;
 $topbar-height-mobile : 90px;
+$admin-topbar-height : 30px;
 
-$container-padding: 20px;
-$container: calc(1400px + ($container-padding * 2));
-$containerFluid : calc(1640px + ($container-padding * 2));
+$container-padding: 15px;
+$container-size: calc(1400px + ($container-padding * 2));
+$container-size-fluid : calc(1640px + ($container-padding * 2));
+$container-calc-padding: calc(50% - ($container-size / 2));
+$container-fluid-calc-padding: calc(50% - ($container-size-fluid  / 2));
 
 $font-family : "Helvitica", sans-serif;
 $font-family-secondary: "Helvitica", sans-serif;
@@ -26,10 +29,8 @@ $font-size-mobile : 16px;
 $line-height: 1.5;
 $line-height-mobile: $line-height;
 
-$extra: 600px;
-$mobile : 900px;
-$tablet : 1190px;
-$desktop : 1360px;
-$large : 1850px;
-
-$menu-width : 745px;
+$extra: 480px;
+$mobile : 767px;
+$tablet : 1024px;
+$desktop : 1600px;
+$large : 1920px;

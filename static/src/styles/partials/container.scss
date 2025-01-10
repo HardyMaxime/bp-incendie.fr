@@ -1,25 +1,27 @@
+@use "variables" as vars;
+
 .container
 {
     width: 100%;
-    padding-left: calc(50% - ($container-size / 2));
-    padding-right: calc(50% - ($container-size / 2));
+    padding-left: vars.$container-calc-padding;
+    padding-right: vars.$container-calc-padding;
 
-    @media only screen and (max-width: $container-size)
+    @media only screen and (max-width: vars.$container-size)
     {
-        padding-left: $container-padding;
-        padding-right: $container-padding;
+        padding-left: vars.$container-padding;
+        padding-right: vars.$container-padding;
     }
 }
 
 .container-fluid
 {
     width: 100%;
-    padding-left: calc(50% - ($container-fluid-size / 2));
-    padding-right: calc(50% - ($container-fluid-size / 2));
+    padding-left: vars.$container-fluid-calc-padding;
+    padding-right: vars.$container-fluid-calc-padding;
 
-    @media only screen and (max-width: $container-fluid-size)
+    @media only screen and (max-width: vars.$container-size-fluid)
     {
-        padding-left: $container-padding;
-        padding-right: $container-padding;
+        padding-left: vars.$container-padding;
+        padding-right: vars.$container-padding;
     }
 }

@@ -1,4 +1,6 @@
-@function _rem($size, $font-size : $font-size) {
+@use "variables.scss" as vars;
+
+@function rem($size, $font-size : vars.$font-size) {
     $remSize: calc($size / $font-size);
     @return #{$remSize}rem;
 }
@@ -7,10 +9,10 @@
     font-size: $size; // Définir la taille de police normale
 
     @media screen and (max-width: $mobile) {
-        font-size: _rem($size, $font-size-mobile); // Convertir la taille de police en rem pour mobile
+        font-size: rem($size, $font-size-mobile); // Convertir la taille de police en rem pour mobile
     }
     @media screen and (min-width: $mobile) {
-        font-size: _rem($size, $font-size); // Convertir la taille de police en rem pour desktop
+        font-size: rem($size, $font-size); // Convertir la taille de police en rem pour desktop
     }
 }
 
@@ -18,10 +20,10 @@
     line-height: $size; // Définir la hauteur de ligne normale
 
     @media screen and (max-width: $mobile) {
-        line-height: _rem($size, $font-size-mobile); // Convertir la hauteur de ligne en rem pour mobile
+        line-height: rem($size, $font-size-mobile); // Convertir la hauteur de ligne en rem pour mobile
     }
     @media screen and (min-width: $mobile) {
-        line-height: _rem($size, $font-size); // Convertir la hauteur de ligne en rem pour desktop
+        line-height: rem($size, $font-size); // Convertir la hauteur de ligne en rem pour desktop
     }
 }
 
@@ -179,37 +181,37 @@ img.is_background
 }
 
 .hide-max-desktop {
-    @media (max-width: $mobile) {
+    @media (max-width: vars.$mobile) {
         display: none !important;
     }
 }
 
 .hide-max-tablet {
-    @media (max-width: $mobile) {
+    @media (max-width: vars.$mobile) {
         display: none !important;
     }
 }
 
 .hide-max-mobile {
-    @media (max-width: $mobile) {
+    @media (max-width: vars.$mobile) {
         display: none !important;
     }
 }
 
 .hide-min-desktop {
-    @media (min-width: $desktop) {
+    @media (min-width: vars.$desktop) {
         display: none !important;
     }
 }
 
 .hide-min-tablet {
-    @media (min-width: $desktop) {
+    @media (min-width: vars.$desktop) {
         display: none !important;
     }
 }
 
 .hide-min-mobile {
-    @media (min-width: $mobile) {
+    @media (min-width: vars.$mobile) {
         display: none !important;
     }
 }
@@ -246,7 +248,7 @@ figure.no-padding
 
 .color-primary
 {
-    color: $primary !important;
+    color: vars.$primary !important;
 }
 
 @for $i from 1 through 10 {
@@ -261,7 +263,7 @@ figure.no-padding
     }
 }
 
-@media only screen and (max-width: $mobile)
+@media only screen and (max-width: vars.$mobile)
 {
     .text-justify,
     .text-mobile-center,
