@@ -73,7 +73,8 @@ class Assets
 
     // Css pour la partie admin
     public function clb_admin_style() {
-        wp_enqueue_style('admin-styles', get_template_directory_uri().'/admin.css');
+        wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/admin/admin.css');
+        wp_enqueue_script('admin-scripts', get_template_directory_uri().'/assets/admin/admin.js');
     }
 
     // Supprime completement Jquery

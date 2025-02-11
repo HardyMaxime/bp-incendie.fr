@@ -1,0 +1,176 @@
+.acf-flexible-content .layout:not(.-collapsed)
+{
+    border: solid #f1c40f 2px;
+}
+
+.acf-fields > .acf-field {
+    border-top-width: 3px !important;
+    border-top-style: solid;
+    border-top-color: #dcdddd !important;
+}
+
+.acf-field-message,
+.acf-field p.description
+{
+    background: #fff3cd;
+    color: #856404 !important;
+}
+
+body .acf-field p.description
+{
+    display: block;
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: solid #ffeeba 1px;
+}
+
+.is-title .mce-edit-area.mce-container 
+{
+    max-height: 130px;
+    overflow: auto;
+}
+
+body .is-title
+{
+    min-height: auto !important;
+}
+
+.is-title .mce-edit-area.mce-container iframe
+{
+    min-height: 100% !important;
+    height: 130px !important;
+}
+
+.is-tiny .mce-edit-area.mce-container 
+{
+    max-height: 200px;
+    overflow: auto;
+}
+
+body .is-tiny
+{
+    min-height: auto !important;
+}
+
+.is-tiny .mce-edit-area.mce-container iframe
+{
+    min-height: 100% !important;
+    height: 200px !important;
+}
+
+#posts-filter #category
+{
+    display: none;
+}
+
+.admin-product-preview img
+{
+    max-height: 450px !important;
+}
+
+.postbox .acf-tab-wrap.-left .acf-tab-group li a
+{
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+.hide-group
+{
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+.hide-group .-border
+{
+    border: 0 !important;
+}
+
+.hide-group > .acf-label
+{
+    display: none;
+}
+
+.strong-group > .acf-label label
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.term-description-wrap
+{
+    display: none !important;
+}
+
+#acf-term-fields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#acf-term-fields .acf-field.acf-field-wysiwyg
+{
+    width: 100% !important;
+}
+
+.hide-media button.insert-media.add_media
+{
+    display: none !important;
+}
+
+.preview-image-backoffice
+{
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ui-widget.ui-widget-content
+{
+    z-index: 10001 !important;
+    max-width: 500px !important;
+    width: 100% !important;
+}
+
+.ui-widget.ui-widget-content h2
+{
+    text-align: center;
+}
+
+.ui-widget-overlay.ui-front
+{
+    z-index: 10000 !important;
+}
+
+.admin-form-control
+{
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-form-control .admin-input,
+.admin-form-control .admin-select
+{
+    max-width: 80%;
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+
+.hide-popuplink .add-popup-link.button
+{
+    display: none !important;
+}
+
+.wp-editor-area p.high-text
+{
+    font-size: 30px !important;
+}

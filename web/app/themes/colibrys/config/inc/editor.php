@@ -11,6 +11,7 @@ class Editor
         add_filter('tiny_mce_before_init', [$this,'clbs_clean_copy_paste_editor']);
         add_action( 'init', [$this,'clbs_tiny_mce_link_buttons'] );
         remove_filter('the_content', 'wpautop');
+        add_action( 'admin_init', [$this, 'clbs_theme_add_editor_styles'] );
     }
 
     /**
@@ -27,7 +28,12 @@ class Editor
     public function clbs_theme_setup()
     {
         // Relative path to the TinyMCE Stylesheet
-        add_editor_style(array('assets/editor-style.css'));
+        add_editor_style(array('assets/editor/editor-style.css'));
+    }
+
+    public function clbs_theme_add_editor_styles()
+    {
+        add_editor_style(array('assets/editor/inner-editor-style.css'));
     }
 
     public function clbs_mce_text_sizes($initArray)
