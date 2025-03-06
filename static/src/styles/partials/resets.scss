@@ -39,7 +39,8 @@ textarea
 ul
 {
     //list-style: none;
-    padding-left: 1rem;
+    list-style-position: inside;
+    padding-left: 0;
 }
 
 .reset-list ul,

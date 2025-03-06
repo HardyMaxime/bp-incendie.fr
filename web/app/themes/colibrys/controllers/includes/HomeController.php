@@ -1,6 +1,6 @@
 <?php
 
-class HomeController
+class HomeController extends AbstractController
 {
     private static $_instance; // L'attribut qui stockera l'instance unique
     /**
@@ -16,19 +16,6 @@ class HomeController
 
     public function __construct()
     {
-        //add_filter('acf/fields/flexible_content/layout_title/name=header', array( $this, 'adminTitleHeader' ), 10, 4);
+        self::setFrontID(get_option("page_on_front"));
     }
-
-    /*
-    public static function adminTitleHeader($title, $field, $layout, $i)
-    {
-        $text = (get_sub_field('content') ? (get_sub_field('content')) : false);
-        $title = "Slide of the header";
-        if( $text ) {
-            $title = '<b>' . esc_html(substr($text['label_pagination'], 0,100)) . '</b>';
-        }
-        return $title;
-    }
-    */
-
 }
