@@ -34,7 +34,7 @@ start: ## Start app
 	$(DOCKER_COMPOSE) up -d
 	@$(call GREEN,"The containers are now started.")
 
-stop: ## Stop app
+down: ## Stop app
 	$(DOCKER_COMPOSE) down
 	@$(call RED,"The containers are now stopped.")
 
