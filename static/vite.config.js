@@ -35,6 +35,10 @@ export default defineConfig({
             }
         }
     },
+    server: {
+        host: '0.0.0.0', // Écoute sur toutes les interfaces
+        port: 5173,      // Port du serveur de développement
+    },
     plugins: [
         legacy({
             targets: ['defaults', 'not IE 11']

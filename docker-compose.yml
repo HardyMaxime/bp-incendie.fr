@@ -1,0 +1,62 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: container-mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: default
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - network-app
+
+  adminer:
+    image: adminer:latest
+    container_name: container-adminer
+    restart: always
+    depends_on:
+      - db
+    environment:
+      APP_ENV: dev
+      PMA_HOST: container-mysql
+    ports:
+      - "8082:8080"
+    networks:
+      - network-app
+
+  www:
+    build: docker/php
+    container_name: container-apache
+    restart: always
+    ports:
+      - "8000:80"
+      - "5173:5173" # Vite dev server
+    volumes:
+      - ./docker/vhosts:/etc/apache2/sites-enabled
+      - .:/var/www:cached
+    networks:
+      - network-app
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    platform: linux/amd64
+    container_name: mailhog
+    logging:
+      driver: 'none'
+    ports:
+      - "1025:1025" # SMTP server
+      - "8025:8025" # Web interface
+    networks:
+      - network-app
+
+volumes:
+    db-data:
+
+networks:
+  network-app:
+    driver: bridge

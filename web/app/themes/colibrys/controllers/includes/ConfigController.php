@@ -18,30 +18,6 @@ class ConfigController extends AbstractController
 
     public function __construct()
     {
-        add_filter( 'page_template', array($this, 'clbs_custom_hierarchy_template') );
-    }
-
-    public static function clbs_custom_hierarchy_template($template)
-    {
-        global $post;
-        if ($post->post_parent) {
-            // get top level parent page
-
-            $parent = get_post(
-               reset(array_reverse(get_post_ancestors($post->ID)))
-            );
-
-            $child_template = locate_template(
-                [
-                    'subpages/'.$parent->post_name . '/page-' . $post->post_name . '.php',
-                    'subpages/'.$parent->post_name . '/page-' . $post->ID . '.php',
-                    'subpages/'.$parent->post_name . '/page.php',
-                ]
-            );
-
-            if ($child_template) return $child_template;
-        }
-        return $template;
     }
 
     /**

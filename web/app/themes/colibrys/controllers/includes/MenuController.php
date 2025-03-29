@@ -1,6 +1,6 @@
 <?php
 
-class MenuController
+class MenuController extends AbstractController
 {
     private static $_instance; // L'attribut qui stockera l'instance unique
     /**
