@@ -9,7 +9,11 @@ class Site
 {
     function __construct ()
     {
+    }
 
+    static function getVersion()
+    {
+        return json_decode(file_get_contents(get_template_directory() . '/version.json'), true)["version"];
     }
 
     static function getPreloadAssets()
@@ -17,13 +21,13 @@ class Site
        $preloads = array(
             "style" => array(
                 "links" => array(
-                    get_template_directory_uri().'/assets/ressources/css/index.css'. '?ver=' . NUMVER,
+                    get_template_directory_uri().'/assets/ressources/css/index.css'. '?ver=' . site::getVersion(),
                 ),
-                "type" => "text/css"
+                "type" => "text/css"    
             ),
             "script" => array(
                 "links" => array(
-                    get_template_directory_uri().'/assets/ressources/scripts/index.js'. '?ver=' . NUMVER
+                    get_template_directory_uri().'/assets/ressources/scripts/index.js'. '?ver=' . site::getVersion()
                 ),
                 "type" => "text/script"
             ),

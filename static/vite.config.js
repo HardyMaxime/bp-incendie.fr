@@ -1,16 +1,18 @@
 import legacy from '@vitejs/plugin-legacy'
 import { defineConfig } from 'vite'
 import nunjucks from 'vite-plugin-nunjucks'
+import { vitePluginVersionFile } from './plugins/vite-assets-version.js'
+import fs from 'fs'
 import path from 'path'
 
 const THEME = "colibrys";
-const THEME_PATH = '../../web/app/themes/'+THEME+'/assets/ressources/';
+const THEME_PATH = path.resolve(__dirname, '../web/app/themes/'+THEME);
 
 export default defineConfig({
     base: "./",
     root: './src',
     build: {
-        outDir: THEME_PATH,
+        outDir: `${THEME_PATH}/assets/ressources/`,
         assetsDir: '',
         assetsInlineLimit: 0,
         rollupOptions: {
@@ -45,7 +47,13 @@ export default defineConfig({
         legacy({
             targets: ['defaults', 'not IE 11']
         }),
-        nunjucks()
+        nunjucks(),
+        vitePluginVersionFile({
+            outputPath: path.join(THEME_PATH, 'assets'),
+            fileName: 'version.json',
+            generateVersion: () => Date.now(),
+            verbose: true
+        })
     ],
     resolve: {
         alias: {
