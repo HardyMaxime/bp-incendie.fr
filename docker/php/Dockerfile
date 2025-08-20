@@ -17,6 +17,9 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
         msmtp \
         msmtp-mta \
         telnet \
+        libjpeg-dev \
+        libfreetype6-dev \
+        libwebp-dev \
     && rm -rf /var/lib/apt/lists/* \
     && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
     && echo "fr_FR.UTF-8 UTF-8" >> /etc/locale.gen \
@@ -44,6 +47,9 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
         mbstring \
         gd \
         xsl \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
+    && docker-php-ext-install \
+        gd \
     && pecl install apcu \
     && docker-php-ext-enable apcu \
     && a2enmod rewrite \
