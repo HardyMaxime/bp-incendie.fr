@@ -2,7 +2,6 @@
 /*
 * Class pour gérer les assets (styles et scripts)
 */
-define("NUMVER", "0.0.1");
 define("nomTheme", "colibrys");
 
 class Site
@@ -11,9 +10,9 @@ class Site
     {
     }
 
-    static function getVersion()
+    public static function getVersion()
     {
-        return json_decode(file_get_contents(get_template_directory() . '/version.json'), true)["version"];
+        return json_decode(file_get_contents(get_template_directory() . '/assets/version.json'), true)["version"];
     }
 
     static function getPreloadAssets()

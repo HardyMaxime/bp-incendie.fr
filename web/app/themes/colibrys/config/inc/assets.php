@@ -28,9 +28,9 @@ class Assets
     public function add_assets_scripts()
     {
         foreach(site::getCheminStylesAssets() as $key => $sourceStyle)
-            wp_enqueue_style($key, $sourceStyle, array(), NUMVER);
+            wp_enqueue_style($key, $sourceStyle, array(), Site::getVersion());
         foreach(site::getCheminScriptsAssets() as $key => $sourceScript)
-            wp_enqueue_script($key, $sourceScript, array(), NUMVER);
+            wp_enqueue_script($key, $sourceScript, array(), Site::getVersion());
 
         // Ajout du nonce pour les appels ajax
         wp_localize_script('index', 'ajax_var', array(
