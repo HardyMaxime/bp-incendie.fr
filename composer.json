@@ -53,7 +53,8 @@
         "wpackagist-plugin/honeypot":"2.2.11",
         "wpackagist-plugin/contact-form-7" : "6.0.6",
         "wpackagist-plugin/complianz-gdpr" : "7.3.1",
-        "wpackagist-plugin/backwpup":"5.2.3"
+        "wpackagist-plugin/backwpup":"5.2.3",
+        "wpackagist-plugin/wps-hide-login":"1.9.17.2"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7.1",
