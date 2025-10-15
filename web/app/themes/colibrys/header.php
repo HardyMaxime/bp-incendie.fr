@@ -6,9 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo get_bloginfo('name'); ?></title>
         <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
-        <link rel="icon" type="<?= ConfigController::getFavicon("type"); ?>" href="<?= ConfigController::getFavicon("url"); ?>" />
-        <?php site::generatePreload(); ?>
+        <link rel="icon" type="<?= Theme()->getFavicon("type"); ?>" href="<?= Theme()->getFavicon("url"); ?>" />
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(ConfigController::generateBodyClass()); ?> >
+    <body >
         <main role="main" class="main" >
