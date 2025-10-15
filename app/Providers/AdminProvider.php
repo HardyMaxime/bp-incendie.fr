@@ -11,6 +11,7 @@ final class AdminProvider extends AbstractProvider
         $this->on('admin_menu', [$this, 'remove_pages_in_admin']);
         $this->on('admin_bar_menu', [$this, "remove_customize_button"], 999);
         $this->on('admin_enqueue_scripts', [$this,'mhdy_register_admin_styles_and_scripts'], 11);
+        $this->on('admin_footer', [$this, 'clbs_auto_close_postbox']);
     }
 
     public function remove_pages_in_admin()
@@ -48,5 +49,27 @@ final class AdminProvider extends AbstractProvider
     public function mhdy_register_admin_styles_and_scripts() {
         wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/admin/admin.css');
         wp_enqueue_script('admin-scripts', get_template_directory_uri().'/assets/admin/admin.js');
+    }
+
+    public function clbs_auto_close_postbox()
+    { ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                // Vérifie si on est sur la page d'options
+                var acfScreen = acf.get('screen');
+                // Exemple : acfScreen = {post_id: "options", screen: "options", ...}
+                if (acfScreen === 'options') {
+                    // On est sur la page d’options → ne rien faire
+                    return;
+                }
+                // Sélectionner toutes les postboxes et les fermer
+                $('.postbox.acf-postbox').addClass('closed');
+
+                $('.acf-field-flexible-content .acf-fc-layout-handle').each(function() {
+                    $(this).closest('.layout').addClass('-collapsed');
+                });
+            });
+        </script>
+    <?php
     }
 }

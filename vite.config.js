@@ -35,6 +35,8 @@ export default defineConfig({
     server: {
         host: '0.0.0.0', // Écoute sur toutes les interfaces
         port: 5173,      // Port du serveur de développement
+        origin: 'http://localhost:5173',
+        cors: true,
     },
     plugins: [
         legacy({
@@ -46,8 +48,8 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            '@images': path.resolve(__dirname, './src/images'),
-            '@': path.resolve(__dirname, './src')
+            '@images': path.resolve(__dirname, './assets/images'),
+            '@': path.resolve(__dirname, './assets')
         }
     },
 });

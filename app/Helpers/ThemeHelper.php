@@ -2,6 +2,8 @@
 
 namespace App\Helpers;
 
+use App\Controllers\AbstractController;
+
 final class ThemeHelper
 {
     /**
@@ -58,5 +60,36 @@ final class ThemeHelper
         }
 
         return $array;
+    }
+
+    public function controller(string $controller_name): AbstractController
+    {
+        $fqcn = $this->resolveControllerFqcn($controller_name);
+        if (!class_exists($fqcn)) {
+            throw new \InvalidArgumentException("Le contrôleur {$fqcn} n'existe pas.");
+        }
+        if (!is_subclass_of($fqcn, AbstractController::class)) {
+            throw new \InvalidArgumentException("{$fqcn} n'étend pas AbstractController.");
+        }
+
+        $instance = $fqcn::getInstance();
+        return $instance;
+    }
+
+    /**
+     * Convertit 'page' / 'PageController' en '\App\Controllers\PageController'
+     */
+    private function resolveControllerFqcn(string $name): string
+    {
+        // FQCN déjà fourni
+        if (str_contains($name, '\\')) {
+            return ltrim($name, '\\');
+        }
+
+        // 'page' -> 'PageController', 'PageController' -> 'PageController'
+        $base = preg_replace('/Controller$/', '', $name);   // retire 'Controller' s'il existe
+        $base = ucfirst($base) . 'Controller';
+
+        return '\\App\\Controllers\\' . $base;
     }
 }

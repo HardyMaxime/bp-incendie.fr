@@ -9,8 +9,11 @@ final class AcfProvider extends AbstractProvider
     public function register(): void
     {
         $this->on('acf/init', [$this, "acf_wysiwyg_remove_wpautop"]);
-        $this->filter('acf/settings/save_json', fn() =>   plugin_dir_path(__FILE__) . 'acf-fields');
-        $this->filter('acf/settings/load_json', fn() =>   plugin_dir_path(__FILE__) . 'acf-fields');
+        $this->on('acf/init', function () {
+            $dir = plugin_dir_path(__FILE__) . '../Config/Acf-fields';
+            $this->filter('acf/settings/save_json', fn($path) => $dir);
+            $this->filter('acf/settings/load_json', fn($paths) => array_merge($paths, [$dir]));
+        });
         $this->filter( 'site_transient_update_plugins', [$this, 'disable_acf_plugin_updates']);
     }
 

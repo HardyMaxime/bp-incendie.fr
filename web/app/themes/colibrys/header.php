@@ -9,5 +9,5 @@
         <link rel="icon" type="<?= Theme()->getFavicon("type"); ?>" href="<?= Theme()->getFavicon("url"); ?>" />
         <?php wp_head(); ?>
     </head>
-    <body >
+    <body <?php body_class(); ?> >
         <main role="main" class="main" >

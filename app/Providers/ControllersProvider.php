@@ -13,7 +13,7 @@ final class ControllersProvider extends AbstractProvider
 
     public function register(): void
     {
-        $this->on('init', function()
+        $this->on('after_setup_theme', function()
         {
             foreach($this->controllers as $controller)
             {

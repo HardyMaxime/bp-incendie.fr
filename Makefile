@@ -14,7 +14,7 @@ EXEC = $(DOCKER) exec -w /var/www/
 PHP = $(EXEC) php
 COMPOSER = $(EXEC) composer
 
-APACHE = container-apache
+APACHE = www
 
 # Colors
 GREEN = /bin/echo -e "\x1b[32m\#\# $1\x1b[0m"
@@ -56,8 +56,14 @@ npm-dev: ## Start npm watch
 
 ## —— 🐘 WordPress ————————————————————————————————————————————————————————————
 
-wp-update: ## Update core
-	$(EXEC) $(APACHE) php wp-cli.phar core update --allow-root
+wp-serve:
+	php -S localhost:8000 -t web/
+
+wp-core-update: ## Update core
+	php wp-cli.phar core update
 
 wp-plugin-update: ## Update all plugins
-	$(EXEC) $(APACHE) php wp-cli.phar plugin update --all --allow-root
+	php wp-cli.phar plugin update --all
+
+wp-dev:
+	php -S localhost:8000 -t web & npm run dev

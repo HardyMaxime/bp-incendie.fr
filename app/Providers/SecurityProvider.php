@@ -40,10 +40,10 @@ final class SecurityProvider extends AbstractProvider
     {
         foreach( $errors as $key => $class ) {
             if(strstr($class, "comment-author-superadmin")) {
-                $classes[$key] = 'comment-author-admin';
+                $errors[$key] = 'comment-author-admin';
             }
         }
-        return $classes;
+        return $errors;
     }
 
     // Supprime les block guthemberg côté front
