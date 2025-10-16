@@ -11,7 +11,10 @@ final class AdminProvider extends AbstractProvider
         $this->on('admin_menu', [$this, 'remove_pages_in_admin']);
         $this->on('admin_bar_menu', [$this, "remove_customize_button"], 999);
         $this->on('admin_enqueue_scripts', [$this,'mhdy_register_admin_styles_and_scripts'], 11);
-        $this->on('admin_footer', [$this, 'clbs_auto_close_postbox']);
+        $this->on('admin_footer', [$this, 'mhdy_auto_close_postbox']);
+        $this->on('admin_head', [$this, 'mhdy_hide_attachment_fields_css']);
+
+        $this->filter('attachment_fields_to_edit', [$this, 'mhdy_remove_attachment_fields'], 10, 2);
     }
 
     public function remove_pages_in_admin()
@@ -51,7 +54,7 @@ final class AdminProvider extends AbstractProvider
         wp_enqueue_script('admin-scripts', get_template_directory_uri().'/assets/admin/admin.js');
     }
 
-    public function clbs_auto_close_postbox()
+    public function mhdy_auto_close_postbox()
     { ?>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
@@ -71,5 +74,28 @@ final class AdminProvider extends AbstractProvider
             });
         </script>
     <?php
+    }
+
+    public function mhdy_remove_attachment_fields($form_fields) {
+        // Supprimer les champs non désirés
+        unset($form_fields['post_title']);    // Titre
+        unset($form_fields['post_excerpt']);  // Légende
+        unset($form_fields['post_content']);  // Description
+        // Ne garder que le champ alt
+        return $form_fields;
+    }
+
+    public function mhdy_hide_attachment_fields_css()
+    {
+        echo '<style>
+        .setting[data-setting="title"],
+        .setting[data-setting="caption"],
+        .setting[data-setting="description"],
+        .compat-field-post_title,
+        .compat-field-post_excerpt,
+        .compat-field-post_content {
+            display: none !important;
+        }
+        </style>';
     }
 }
