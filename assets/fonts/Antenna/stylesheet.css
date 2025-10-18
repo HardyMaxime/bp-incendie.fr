@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna ExtraLight'), local('Antenna-ExtraLight'),
-        url('@/fonts/Antenna/Antenna-ExtraLight.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-ExtraLight.woff') format('woff');
+        url('Antenna-ExtraLight.woff2') format('woff2'),
+        url('Antenna-ExtraLight.woff') format('woff');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -11,8 +11,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna Regular'), local('Antenna-Regular'),
-        url('@/fonts/Antenna/Antenna-Regular.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-Regular.woff') format('woff');
+        url('Antenna-Regular.woff2') format('woff2'),
+        url('Antenna-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -21,8 +21,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna LightItalic'), local('Antenna-LightItalic'),
-        url('@/fonts/Antenna/Antenna-LightItalic.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-LightItalic.woff') format('woff');
+        url('Antenna-LightItalic.woff2') format('woff2'),
+        url('Antenna-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -31,8 +31,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna BoldItalic'), local('Antenna-BoldItalic'),
-        url('@/fonts/Antenna/Antenna-BoldItalic.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-BoldItalic.woff') format('woff');
+        url('Antenna-BoldItalic.woff2') format('woff2'),
+        url('Antenna-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -41,8 +41,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna ExtraLightItalic'), local('Antenna-ExtraLightItalic'),
-        url('@/fonts/Antenna/Antenna-ExtraLightItalic.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-ExtraLightItalic.woff') format('woff');
+        url('Antenna-ExtraLightItalic.woff2') format('woff2'),
+        url('Antenna-ExtraLightItalic.woff') format('woff');
     font-weight: 200;
     font-style: italic;
     font-display: swap;
@@ -51,8 +51,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna Thin'), local('Antenna-Thin'),
-        url('@/fonts/Antenna/Antenna-Thin.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-Thin.woff') format('woff');
+        url('Antenna-Thin.woff2') format('woff2'),
+        url('Antenna-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -61,8 +61,8 @@
 @font-face {
     font-family: 'Antenna RegularItalic';
     src: local('Antenna RegularItalic'), local('Antenna-RegularItalic'),
-        url('@/fonts/Antenna/Antenna-RegularItalic.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-RegularItalic.woff') format('woff');
+        url('Antenna-RegularItalic.woff2') format('woff2'),
+        url('Antenna-RegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -71,8 +71,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna Bold'), local('Antenna-Bold'),
-        url('@/fonts/Antenna/Antenna-Bold.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-Bold.woff') format('woff');
+        url('Antenna-Bold.woff2') format('woff2'),
+        url('Antenna-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -81,8 +81,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna MediumItalic'), local('Antenna-MediumItalic'),
-        url('@/fonts/Antenna/Antenna-MediumItalic.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-MediumItalic.woff') format('woff');
+        url('Antenna-MediumItalic.woff2') format('woff2'),
+        url('Antenna-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -91,8 +91,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna Medium'), local('Antenna-Medium'),
-        url('@/fonts/Antenna/Antenna-Medium.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-Medium.woff') format('woff');
+        url('Antenna-Medium.woff2') format('woff2'),
+        url('Antenna-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -101,8 +101,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna Light'), local('Antenna-Light'),
-        url('@/fonts/Antenna/Antenna-Light.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-Light.woff') format('woff');
+        url('Antenna-Light.woff2') format('woff2'),
+        url('Antenna-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -111,8 +111,8 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna Black'), local('Antenna-Black'),
-        url('@/fonts/Antenna/Antenna-Black.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-Black.woff') format('woff');
+        url('Antenna-Black.woff2') format('woff2'),
+        url('Antenna-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -121,9 +121,10 @@
 @font-face {
     font-family: 'Antenna';
     src: local('Antenna BlackItalic'), local('Antenna-BlackItalic'),
-        url('@/fonts/Antenna/Antenna-BlackItalic.woff2') format('woff2'),
-        url('@/fonts/Antenna/Antenna-BlackItalic.woff') format('woff');
+        url('Antenna-BlackItalic.woff2') format('woff2'),
+        url('Antenna-BlackItalic.woff') format('woff');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
+

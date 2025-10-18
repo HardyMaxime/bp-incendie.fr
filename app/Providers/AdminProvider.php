@@ -60,8 +60,9 @@ final class AdminProvider extends AbstractProvider
             jQuery(document).ready(function($) {
                 // Vérifie si on est sur la page d'options
                 var acfScreen = acf.get('screen');
+                console.log(acfScreen);
                 // Exemple : acfScreen = {post_id: "options", screen: "options", ...}
-                if (acfScreen === 'options') {
+                if (acfScreen === 'options' || acfScreen === "field_group") {
                     // On est sur la page d’options → ne rien faire
                     return;
                 }

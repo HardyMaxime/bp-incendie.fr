@@ -1,29 +1,29 @@
 @use "variables.scss" as vars;
 
 @function rem($size, $font-size : vars.$font-size) {
-    $remSize: calc($size / $font-size);
+    $remSize: calc($size / vars.$font-size);
     @return #{$remSize}rem;
 }
 
 @mixin fontsize($size) {
     font-size: $size; // Définir la taille de police normale
 
-    @media screen and (max-width: $mobile) {
-        font-size: rem($size, $font-size-mobile); // Convertir la taille de police en rem pour mobile
+    @media screen and (max-width: vars.$mobile) {
+        font-size: rem($size, vars.$font-size-mobile); // Convertir la taille de police en rem pour mobile
     }
-    @media screen and (min-width: $mobile) {
-        font-size: rem($size, $font-size); // Convertir la taille de police en rem pour desktop
+    @media screen and (min-width: vars.$mobile) {
+        font-size: rem($size, vars.$font-size); // Convertir la taille de police en rem pour desktop
     }
 }
 
 @mixin lineheight($size) {
     line-height: $size; // Définir la hauteur de ligne normale
 
-    @media screen and (max-width: $mobile) {
-        line-height: rem($size, $font-size-mobile); // Convertir la hauteur de ligne en rem pour mobile
+    @media screen and (max-width: vars.$mobile) {
+        line-height: rem($size, vars.$font-size-mobile); // Convertir la hauteur de ligne en rem pour mobile
     }
-    @media screen and (min-width: $mobile) {
-        line-height: rem($size, $font-size); // Convertir la hauteur de ligne en rem pour desktop
+    @media screen and (min-width: vars.$mobile) {
+        line-height: rem($size, vars.$font-size); // Convertir la hauteur de ligne en rem pour desktop
     }
 }
 

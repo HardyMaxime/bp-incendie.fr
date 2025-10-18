@@ -1,0 +1,79 @@
+@use "../../variables.scss" as vars;
+@use "../../helpers.scss" as help;
+
+.home .section-header
+{
+    background: vars.$background-secondary;
+    color: vars.$white;
+    font-family: vars.$font-family;
+}
+
+.home .section-header .heading
+{
+    padding-top: help.rem(120px);
+    padding-bottom: help.rem(90px);
+}
+
+.home .section-header .heading-title
+{
+    @include help.fontsize(90px);
+    line-height: 1.11;
+}
+
+.home .section-header .section-banner 
+{
+    width: 100%;
+    height: 770px;
+}
+
+@media only screen and (max-width:vars.$container-size)
+{
+    .home .section-header .heading
+    {
+        padding-top: help.rem(90px);
+        padding-bottom: help.rem(80px);
+    }
+
+    .home .section-header .heading-title
+    {
+        @include help.fontsize(80px);
+    }
+
+    .home .section-header .section-banner 
+    {
+        height: 650px;
+    }
+}
+
+@media only screen and (max-width:vars.$tablet)
+{
+    .home .section-header .heading
+    {
+        padding-top: vars.$section-mobile-padding;
+        padding-bottom:vars.$section-mobile-padding;
+    }
+
+    .home .section-header .heading-title
+    {
+        @include help.fontsize(60px);
+    }
+
+    .home .section-header .section-banner 
+    {
+        height: 480px;
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .home .section-header .heading-title
+    {
+        text-align: center;
+        @include help.fontsize(35px);
+    }
+
+    .home .section-header .section-banner 
+    {
+        height: 360px;
+    }
+}

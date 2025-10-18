@@ -2,8 +2,6 @@
 
 namespace App;
 
-use App\Core\Controllers;
-
 final class Kernel
 {
     private array $providers = [
@@ -14,7 +12,7 @@ final class Kernel
         Providers\AdminProvider::class,
         Providers\AssetsProvider::class,
         Providers\EditorProvider::class,
-        Providers\ControllersProvider::class
+        Providers\ControllersProvider::class,
     ];
 
     public function boot(): void

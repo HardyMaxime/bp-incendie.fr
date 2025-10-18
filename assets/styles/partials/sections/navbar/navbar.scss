@@ -1,0 +1,144 @@
+@use "../../variables.scss" as vars;
+@use "../../helpers.scss" as help;
+
+:root
+{
+    --navbar-padding: 15px
+}
+
+.navbar
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    background: vars.$secondary;
+    height: vars.$topbar-height;
+    padding-top: var(--navbar-padding);
+    padding-bottom: var(--navbar-padding);
+    gap: help.rem(80px);
+    transition: all 0.3s ease;
+}
+
+.admin-bar .navbar
+{
+    top: help.rem(32px);
+}
+
+body.scrolled .navbar
+{
+    height: vars.$topbar-height-mobile;
+}
+
+.navbar::after
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #FCFBFC;
+    opacity: 0.2;
+}
+
+.navbar-brand
+{
+    display: flex;
+    flex: none;
+    height: 100%;
+}
+
+.navbar-brand img
+{
+    object-fit: contain;
+}
+
+.navbar-listing
+{
+    display: flex;
+    gap: help.rem(50px);
+    list-style: none;
+    color: vars.$white;
+    font-weight: 400;
+    @include help.fontsize(20px);
+}
+
+.navbar-listing-item,
+.navbar-listing-link
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-listing-item::after
+{
+    content: "";
+    position: absolute;
+    top: calc(var(--navbar-padding) * -1);
+    left: 0;
+    width: 100%;
+    background: vars.$primary;
+    height: 5px;
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+}
+
+.navbar-listing-item:not(:has(.btn)):hover::after
+{
+    transform: scaleX(1);
+    transform-origin: top left;
+}
+
+.navbar-listing-link.btn
+{
+    height: auto;
+}
+
+@media only screen and (max-width:vars.$topbar-breakpoint)
+{
+    .navbar-listing
+    {
+        font-size: 1rem;
+        position: absolute;
+        top: vars.$topbar-height;
+        left: 0;
+        width: 100%;
+        height: calc(100% - vars.$topbar-height);
+        flex-direction: column;
+        background: vars.$secondary;
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+    }
+
+    .navbar-listing-item,
+    .navbar-listing-link
+    {
+        height: auto;
+    }
+
+    body.is-scrolled .navbar-listing
+    {
+        top: vars.$topbar-height-mobile;
+        height: calc(100% - vars.$topbar-height-mobile);
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .navbar
+    {
+        padding-top: help.rem(10px);
+        padding-bottom: help.rem(10px);
+        gap: help.rem(40px);
+        height: vars.$topbar-height-mobile;
+    }
+}

@@ -21,7 +21,6 @@
 /* Import
 ========================================================================== */
 
-
 html 
 {
     font-family: vars.$font-family;
@@ -60,6 +59,16 @@ main.main
     //height: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: vars.$topbar-height;
+    @media only screen and (max-width:vars.$mobile)
+    {
+        padding-top: vars.$topbar-height-mobile;
+    }
+}
+
+.scrolled main.main
+{
+    padding-top:  vars.$topbar-height-mobile;
 }
 
 /* Avoid Chrome to see Safari hack */

@@ -8,6 +8,7 @@ final class ControllersProvider extends AbstractProvider
 {
     private array $controllers = [
         \App\Controllers\PageController::class,
+        \App\Controllers\MenuController::class,
         // \App\Controllers\AutreController::class,
     ];
 

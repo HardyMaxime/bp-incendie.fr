@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="456.999" height="703" viewBox="0 0 456.999 703">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Tracé_9" data-name="Tracé 9" d="M229.087,2.331c-1.689,23.048-.595,42.6-4.971,66.171C204.683,173.11,134.136,227.459,71.437,304.143,21.583,365.129-6.769,427.994,1.39,509.149,10.143,596.442,80.9,680.88,166.2,702.072c-42.5-54.278-54.373-128.488-34.37-194.374,6.541-21.454,17.387-42.885,29.446-61.7,37.2-58.155,95.308-91.1,128.108-152.654C343.8,191.115,304.272,79.562,230.443.071A3.509,3.509,0,0,0,229.824,0c-1.261,0-.642,1.142-.737,2.331" transform="translate(-0.001)" fill="#fcfbfc"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Tracé_10" data-name="Tracé 10" d="M192.907,54.363C173.879,166.012,60.684,204.544,20.915,304.419,1.078,354.178,2.434,409.788,23.651,458.833c6.779,15.627,16.15,32.229,28.4,44.051-6.85-33.561-3.592-64.506,12.3-94.832,31.539-60.082,88.886-79.324,134.126-123.375,27.639-26.949,50.163-60.962,56.585-99.756,10.632-64.53-22.929-126.276-59.915-176.178-.048,15.508.4,30.184-2.236,45.62" transform="translate(-6.85 -8.743)" fill="#fcfbfc"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Tracé_11" data-name="Tracé 11" d="M201.52,42.331C189.627,78.651,167.2,110.357,138.8,135.5,78.883,188.515,3.079,205.926,10.762,303.779c.285,3.924,2.093,7.373,1.855,11.346,34.2-2.283,68.193-14.081,97.782-31.135,36.748-21.216,69.929-55.444,89.528-93.239C223.569,145.178,230.9,90.234,217.385,40.523c-2.164-7.921-5.471-15.841-8.4-23.5-3.568,7.849-4.733,16.983-7.469,25.308" transform="translate(-10.221 -17.023)" fill="#fcfbfc"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_14" data-name="Groupe 14" transform="translate(-140.001 -48)" opacity="0.02">
+    <g id="Groupe_11" data-name="Groupe 11" transform="translate(140.001 48)">
+      <g id="Groupe_3" data-name="Groupe 3" clip-path="url(#clip-path)">
+        <rect id="Rectangle_5" data-name="Rectangle 5" width="350.572" height="702.072" transform="translate(-6.769 -0.007)" fill="#fcfbfc"/>
+      </g>
+    </g>
+    <g id="Groupe_12" data-name="Groupe 12" transform="translate(302.908 255.956)">
+      <g id="Groupe_5" data-name="Groupe 5" clip-path="url(#clip-path-2)">
+        <rect id="Rectangle_6" data-name="Rectangle 6" width="264.612" height="494.141" transform="translate(-5.771 -0.007)" fill="#fcfbfc"/>
+      </g>
+    </g>
+    <g id="Groupe_13" data-name="Groupe 13" transform="translate(383.104 452.899)">
+      <g id="Groupe_7" data-name="Groupe 7" clip-path="url(#clip-path-3)">
+        <rect id="Rectangle_7" data-name="Rectangle 7" width="227.816" height="298.102" transform="translate(-7.142 -0.007)" fill="#fcfbfc"/>
+      </g>
+    </g>
+  </g>
+</svg>
