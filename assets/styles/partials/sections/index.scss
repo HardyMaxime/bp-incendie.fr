@@ -1,2 +1,11 @@
+@use "../variables.scss" as vars;
+@use "../helpers.scss" as help;
+
 @use "navbar/navbar" as navbar;
 @use "navbar/navbar-button" as navbar-button;
+
+.section-dark
+{
+    background: vars.$background-secondary;
+    color: vars.$white;
+}

@@ -51,7 +51,7 @@
                       ],
                     onsubmit: function(e){
                         var target = (e.data.target ? '_blank' : '');
-                        var returnText = '<a href="' + e.data.url + '" class="link" target="' + target + '" rel="noopener">' + e.data.name + '</a>';
+                        var returnText = '<a href="' + e.data.url + '" class="btn" target="' + target + '" rel="noopener">' + e.data.name + '</a>';
                         ed.execCommand('mceInsertContent', 0, returnText);
                     }
                 });

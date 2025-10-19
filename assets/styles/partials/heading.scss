@@ -1,0 +1,15 @@
+@use "variables.scss" as vars;
+@use "helpers.scss" as help;
+
+.heading.section-heading .heading-title
+{
+    font-weight: 700;
+    line-height: 1.2;
+    color: vars.$color-secondary;
+    @include help.fontsize(20px);
+}
+
+.heading.section-heading .heading-title::before
+{
+    content: "// ";
+}

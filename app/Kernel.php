@@ -13,6 +13,7 @@ final class Kernel
         Providers\AssetsProvider::class,
         Providers\EditorProvider::class,
         Providers\ControllersProvider::class,
+        Providers\AcfProvider::class,
     ];
 
     public function boot(): void

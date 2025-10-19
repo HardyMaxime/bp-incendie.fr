@@ -1,0 +1,74 @@
+@use "../../variables.scss" as vars;
+@use "../../helpers.scss" as help;
+
+.home .section.section-about
+{
+    display: flex;
+    flex-direction: column;
+    gap: help.rem(35px);
+    padding-top: help.rem(180px);
+    padding-bottom: help.rem(170px);
+}
+
+.home .section-about-content
+{
+    display: grid;
+    grid-template-columns: 495fr 660fr;
+    justify-content: space-between;
+    gap: 15%;
+}
+
+.home .section-about-content .section-about-left
+{
+    line-height: 1.2;
+    @include help.fontsize(50px);
+
+    .btn
+    {
+        @include help.fontsize(20px);
+    }
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .home .section.section-about
+    {
+        padding-top: help.rem(120px);
+        padding-bottom: help.rem(100px);
+    }
+}
+
+@media only screen and (max-width:vars.$container-size)
+{
+    .home .section-about-content .section-about-left
+    {
+        line-height: 1.2;
+        @include help.fontsize(40px);
+    }
+
+    .home .section-about-content
+    {
+        gap: help.rem(60px);
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .home .section.section-about
+    {
+        padding-top: vars.$section-mobile-padding;
+        padding-bottom: vars.$section-mobile-padding;
+        text-align: center;
+    }
+
+    .home .section-about-content
+    {
+        grid-template-columns: 1fr;
+        gap: help.rem(40px);
+    }
+
+    .home .section-about-content .section-about-left
+    {
+        @include help.fontsize(30px);
+    }
+}
