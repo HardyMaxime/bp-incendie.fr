@@ -18,10 +18,15 @@ $admin-topbar-height : 30px;
 $topbar-breakpoint : 1200px;
 
 $container-padding: 15px;
+
 $container-size: calc(1360px + ($container-padding * 2));
 $container-size-fluid : calc(1640px + ($container-padding * 2));
+
 $container-calc-padding: calc(50% - ($container-size / 2));
 $container-fluid-calc-padding: calc(50% - ($container-size-fluid  / 2));
+
+$container-size-full : calc(2200px + ($container-padding * 2));
+$container-full-calc-padding: calc(50% - ($container-size-full  / 2));
 
 $font-family : "Antenna", sans-serif;
 $font-family-secondary: "Antenna", sans-serif;

@@ -1,4 +1,5 @@
-@use "variables" as vars;
+@use "variables.scss" as vars;
+@use "helpers.scss" as help;
 
 .container
 {
@@ -13,6 +14,25 @@
     }
 }
 
+.container-full
+{
+    width: 100%;
+    padding-left: help.rem(20px);
+    padding-right: help.rem(20px);
+
+    @media only screen and (min-width:2200px)
+    {
+        padding-left: vars.$container-full-calc-padding;
+        padding-right: vars.$container-full-calc-padding;
+    }
+
+    @media only screen and (max-width: vars.$container-size-fluid)
+    {
+        padding-left: help.rem(15px);
+        padding-right: help.rem(15px);
+    }
+}
+
 .container-fluid
 {
     width: 100%;
@@ -22,6 +42,53 @@
     @media only screen and (max-width: vars.$container-size-fluid)
     {
         padding-left: vars.$container-padding;
+        padding-right: vars.$container-padding;
+    }
+}
+
+.container-right
+{
+    width: 100%;
+    padding-left: 0;
+    padding-right: vars.$container-calc-padding;
+
+    @media only screen and (min-width:2260px)
+    {
+        padding-right: vars.$container-calc-padding;
+        padding-left: vars.$container-calc-padding;
+    }
+
+    @media only screen and (max-width: vars.$container-size)
+    {
+        padding-left: 0;
+        padding-right: vars.$container-padding;
+    }
+
+    @media only screen and (max-width: vars.$mobile)
+    {
+        padding-left: vars.$container-padding;
+    }
+}
+
+.container-left
+{
+    width: 100%;
+    padding-left: vars.$container-calc-padding;
+    padding-right: 0;
+
+    @media only screen and (min-width:2260px)
+    {
+        padding-right: vars.$container-calc-padding;
+    }
+
+    @media only screen and (max-width: vars.$container-size)
+    {
+        padding-left: vars.$container-padding;
+        padding-right: 0;
+    }
+
+    @media only screen and (max-width: vars.$mobile)
+    {
         padding-right: vars.$container-padding;
     }
 }

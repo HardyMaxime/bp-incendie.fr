@@ -1,0 +1,117 @@
+@use "../../variables.scss" as vars;
+@use "../../helpers.scss" as help;
+
+.home .section.section-service
+{
+    display: flex;
+}
+
+.section-service-content
+{
+    display: flex;
+    flex-direction: column;
+    max-width: help.rem(760px);
+    width: 100%;
+    gap: help.rem(50px);
+    padding-right: help.rem(100px);
+    padding-top: vars.$section-mobile-padding;
+    padding-bottom: vars.$section-mobile-padding;
+    align-self: center;
+}
+
+.section-services-listing
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-services-listing a
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: help.rem(20px);
+    padding: help.rem(30px) 0;
+    @include help.fontsize(40px);
+}
+
+.section-services-listing a:not(:last-child)::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: vars.$white;
+    opacity: 0.2;
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform .3s ease-in-out;
+}
+
+.section-services-listing a::after
+{
+    content: "";
+    flex: none;
+    width: help.rem(52px);
+    height: help.rem(52px);
+    background-color: #707070;
+    border-radius: 100%;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOC4wMyIgaGVpZ2h0PSIxOC4wMyI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZGF0YS1uYW1lPSJJY29uIGZlYXRoZXItYXJyb3ctZG93bi1yaWdodCI+PHBhdGggZD0ibTEuNDE0IDE2LjYxNCAxNS4yLTE1LjIiIGRhdGEtbmFtZT0iVHJhY8OpIDgzIi8+PHBhdGggZD0iTTE2LjYxNCAxNi42MTR2LTE1LjJoLTE1LjIiIGRhdGEtbmFtZT0iVHJhY8OpIDg0Ii8+PC9nPjwvc3ZnPg==");
+    background-size: help.rem(15px) help.rem(15px);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+
+.section-services-listing a:hover::after
+{
+    background-color: vars.$primary;
+    transform: translateY(-2px) scale(1.02);
+}
+//PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOC4wMyIgaGVpZ2h0PSIxOC4wMyI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjJmMmYyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZGF0YS1uYW1lPSJJY29uIGZlYXRoZXItYXJyb3ctZG93bi1yaWdodCI+PHBhdGggZD0ibTEuNDE0IDE2LjYxNCAxNS4yLTE1LjIiIGRhdGEtbmFtZT0iVHJhY8OpIDgzIi8+PHBhdGggZD0iTTE2LjYxNCAxNi42MTR2LTE1LjJoLTE1LjIiIGRhdGEtbmFtZT0iVHJhY8OpIDg0Ii8+PC9nPjwvc3ZnPg==
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .section-services-listing a
+    {
+        padding: help.rem(20px) 0;
+        @include help.fontsize(30px);
+    }
+}
+
+@media only screen and (max-width:vars.$container-size)
+{
+    .section-service-content
+    {
+        padding-right: help.rem(50px);
+    }
+
+    .section-services-listing a
+    {
+        @include help.fontsize(22px);
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .home .section.section-service
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-service-content
+    {
+        padding-right: 0;
+    }
+
+    .section-service-image
+    {
+        max-width: help.rem(520px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

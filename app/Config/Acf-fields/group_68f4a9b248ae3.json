@@ -81,7 +81,7 @@
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
-                                "class": "is-tiny",
+                                "class": "",
                                 "id": ""
                             },
                             "default_value": "",
@@ -120,5 +120,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760865141
+    "modified": 1760868399
 }

@@ -14,4 +14,5 @@
         <div class="section-about-right">
             <?= (($right)); ?>
         </div>
+    </div>
 </section>

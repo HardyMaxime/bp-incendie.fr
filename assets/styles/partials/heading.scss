@@ -1,6 +1,13 @@
 @use "variables.scss" as vars;
 @use "helpers.scss" as help;
 
+.heading
+{
+    display: flex;
+    flex-direction: column;
+    gap: help.rem(20px);
+}
+
 .heading.section-heading .heading-title
 {
     font-weight: 700;
@@ -12,4 +19,17 @@
 .heading.section-heading .heading-title::before
 {
     content: "// ";
+}
+
+.heading-description
+{
+    @include help.fontsize(24px);
+}
+
+@media only screen and (max-width:vars.$container-size)
+{
+    .heading-description
+    {
+        @include help.fontsize(22px);
+    }
 }
