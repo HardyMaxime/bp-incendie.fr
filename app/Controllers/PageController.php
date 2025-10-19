@@ -10,6 +10,10 @@ final class PageController extends AbstractController
 
     public function __construct()
     {
-        
+        $this->add_admin_flexible_content_title(
+            "section-mission",
+            "title",
+            "Paragraphe"
+        );
     }
 }

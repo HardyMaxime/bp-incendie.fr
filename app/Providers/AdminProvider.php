@@ -69,9 +69,11 @@ final class AdminProvider extends AbstractProvider
                 // Sélectionner toutes les postboxes et les fermer
                 $('.postbox.acf-postbox').addClass('closed');
 
+                /*
                 $('.acf-field-flexible-content .acf-fc-layout-handle').each(function() {
                     $(this).closest('.layout').addClass('-collapsed');
                 });
+                */
             });
         </script>
     <?php
