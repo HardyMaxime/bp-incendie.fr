@@ -1,0 +1,134 @@
+@use "../variables.scss" as vars;
+@use "../helpers.scss" as help;
+
+.paragraph-content
+{
+    display: flex;
+    flex-direction: column;
+    gap: help.rem(50px);
+    margin-top: help.rem(95px);
+    @include help.fontsize(30px);
+}
+
+.paragraph-content .paragraph-content-item.first
+{
+    padding-bottom: help.rem(30px);
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: help.rem(120px);
+}
+
+.paragraph-content .paragraph-content-item.first.title-arrow
+{
+    gap: help.rem(180px);
+    align-items: flex-start;
+}
+
+.paragraph-content .paragraph-content-item.first.title-arrow::after
+{
+    order: -1;
+    transform: rotate(90deg);
+    background-color: vars.$primary;
+}
+
+.paragraph-content .paragraph-content-item
+{
+    max-width: help.rem(1140px);
+    width: 100%;
+    padding-left: help.rem(90px);
+}
+
+.paragraph-content .paragraph-content-item:nth-child(2)
+{
+    padding-right: help.rem(85px);
+    margin-left: auto;
+}
+
+.paragraph-content .high
+{
+    line-height: 1.1;
+    @include help.fontsize(60px);
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .paragraph-content
+    {
+        gap: help.rem(40px);
+        margin-top: help.rem(40px);
+        @include help.fontsize(24px);
+    }
+
+    .paragraph-content .paragraph-content-item.first.title-arrow
+    {
+        gap: help.rem(80px);
+    }
+
+    .paragraph-content .paragraph-content-item.first
+    {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: help.rem(20px);
+    }
+
+    .paragraph-content .high
+    {
+        line-height: 1.1;
+        @include help.fontsize(40px);
+    }
+}
+
+@media only screen and (max-width:vars.$tablet)
+{
+    .paragraph-content .paragraph-content-item.first.title-arrow
+    {
+        flex-direction: column;
+        gap: help.rem(40px);
+    }
+
+    .paragraph-content .paragraph-content-item
+    {
+        max-width: 100%;
+        width: 100%;
+        padding-left: help.rem(20px);
+    }
+
+    .paragraph-content .paragraph-content-item:nth-child(2)
+    {
+        padding-right: 0;
+        padding-left: help.rem(60px);
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .paragraph-content 
+    {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .paragraph-content .high
+    {
+        line-height: 1.3;
+        @include help.fontsize(26px);
+    }
+
+    .paragraph-content .paragraph-content-item
+    {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .paragraph-content .paragraph-content-item:nth-child(2)
+    {
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: auto;
+    }
+}

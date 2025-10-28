@@ -1,0 +1,85 @@
+@use "../variables.scss" as vars;
+@use "../helpers.scss" as help;
+
+body.wp-singular:not(.home)
+{
+    background: vars.$background-secondary;
+    color: vars.$white;
+}
+
+.posttype-content:not(.no-grid)
+{
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: help.rem(110px);
+}
+
+.posttype-taxonomy,
+.posttype-taxonomy-list
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.posttype-taxonomy .title
+{
+    font-weight: 600;
+    @include help.fontsize(60px);
+}
+
+.posttype-taxonomy-list
+{
+    list-style: none;
+    line-height: 1;
+    margin-top: help.rem(38px);
+    gap: help.rem(38px);
+    font-weight: 600;
+    @include help.fontsize(40px);
+}
+
+.posttype-taxonomy-list-item
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:before {content: "//";}
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .posttype-content:not(.no-grid)
+    {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: help.rem(vars.$gap);
+    }
+
+    .posttype-taxonomy .title
+    {
+        @include help.fontsize(40px);
+    }
+
+    .posttype-taxonomy-list
+    {
+        margin-top: help.rem(30px);
+        gap: help.rem(30px);
+        @include help.fontsize(30px);
+    }
+}
+
+@media only screen and (max-width:vars.$topbar-breakpoint)
+{
+    .posttype-content:not(.no-grid)
+    {
+        grid-template-columns:1fr;
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .posttype-taxonomy-list
+    {
+        @include help.fontsize(24px);
+    }
+}

@@ -3,4 +3,5 @@
     <?php get_template_part("parts/home/about"); ?>
     <?php get_template_part("parts/home/mission"); ?>
     <?php get_template_part("parts/home/service"); ?>
+    <?php get_template_part("parts/home/choose-us"); ?>
 <?php get_footer(); ?>

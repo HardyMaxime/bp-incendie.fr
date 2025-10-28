@@ -1,0 +1,82 @@
+@use "../../variables.scss" as vars;
+@use "../../helpers.scss" as help;
+
+.section.section-choose-us
+{
+    display: flex;
+    flex-direction: column;
+    gap: help.rem(110px);
+    padding-top: help.rem(130px);
+    padding-bottom: help.rem(130px);
+}
+
+.section.section-choose-us .heading
+{
+    text-align: center;
+    gap: 10px;
+}
+
+.section.section-choose-us .heading .heading-subtitle
+{
+    font-weight: 400;
+    line-height: 1.2;
+    @include help.fontsize(50px);
+}
+
+.section-reassurance-cols
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: help.rem(80px);
+}
+
+.section-reassurance-col
+{
+    display: flex;
+    flex-direction: column;
+    gap: help.rem(45px);
+    text-align: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .section.section-choose-us
+    {
+        padding-top: help.rem(100px);
+        padding-bottom: help.rem(100px);
+    }
+}
+
+@media only screen and (max-width:vars.$container-size)
+{
+    .section.section-choose-us
+    {
+        padding-top: help.rem(vars.$section-mobile-padding);
+        padding-bottom: help.rem(vars.$section-mobile-padding);
+        gap: help.rem(vars.$section-mobile-padding);
+    }
+
+    .section.section-choose-us .heading .heading-subtitle
+    {
+        @include help.fontsize(40px);
+    }
+
+    .section-reassurance-cols
+    {
+        gap: help.rem(20px);
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .section-reassurance-cols
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .section.section-choose-us .heading .heading-subtitle
+    {
+        @include help.fontsize(30px);
+    }
+}

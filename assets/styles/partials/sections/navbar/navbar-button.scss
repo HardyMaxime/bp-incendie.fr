@@ -42,7 +42,7 @@
     color: vars.$white;
 }
 
-body.menu-open,
+body.menu-open .navbar-button,
 .navbar-button:hover
 {
     cursor: pointer;
@@ -58,6 +58,6 @@ body.menu-open,
 
     &::after
     {
-        transform: rotate(-45deg);
+        transform: rotate(-44deg);
     }
 }

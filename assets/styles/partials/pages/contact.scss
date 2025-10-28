@@ -1,0 +1,81 @@
+@use "../variables.scss" as vars;
+@use "../helpers.scss" as help;
+
+.page-contact .page-content
+{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.16;
+    @include help.fontsize(60px);
+}
+
+.page-contact .page-content .btn
+{
+    align-self: flex-start;
+    margin-top: help.rem(60px);
+    @include help.fontsize(30px);
+}
+
+.page-contact.title-arrow
+{
+    align-items: flex-start;
+    gap: help.rem(120px);
+}
+
+.page-contact.title-arrow::after
+{
+    transform: rotate(190deg);
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .page-contact .page-content
+    {
+        @include help.fontsize(50px);
+    }
+
+    .page-contact .page-content .btn
+    {
+        @include help.fontsize(25px);
+    }
+}
+
+@media only screen and (max-width:vars.$tablet)
+{
+    .page-contact .page-content
+    {
+        @include help.fontsize(35px);
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .page-contact.title-arrow
+    {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .page-contact.title-arrow::after
+    {
+        order: -1;
+        transform: rotate(90deg);
+    }
+
+    .page-contact .page-content
+    {
+        @include help.fontsize(24px);
+    }
+
+    .page-contact
+    {
+        margin-top: help.rem(40px);
+        text-align: center;
+    }
+
+    .page-contact .page-content .btn
+    {
+        margin-left: auto;
+        margin-right: auto;
+        @include help.fontsize(22px);
+    }
+}

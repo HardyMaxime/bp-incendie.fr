@@ -3,9 +3,11 @@
 
 .btn
 {
+    display: block;
     background: vars.$primary;
     color: vars.$white;
     min-width: help.rem(250px);
+    max-width: help.rem(290px);
     text-align: center;
     align-items: center;
     padding: help.rem(25px) help.rem(5px);
@@ -16,9 +18,15 @@
 
 .btn:hover
 {
-    background: darken(vars.$primary, 5%);
     color: vars.$white !important;
     transform: translateY(-2px) scale(1.02);
+}
+
+.section-primary .btn
+{
+    background: vars.$white;
+    color: vars.$primary;
+    &:hover {color: vars.$primary !important;}
 }
 
 @media only screen and (max-width:vars.$container-size)

@@ -1,4 +1,105 @@
+@use "../variables.scss" as vars;
+@use "../helpers.scss" as help;
+
 @use "home/header" as header;
 @use "home/about" as about;
 @use "home/mission" as mission;
 @use "home/service" as service;
+@use "home/choose-us" as choose;
+
+@use "paragraph" as paragraph;
+@use "./contact" as contact;
+
+.page-header
+{
+    padding-top: help.rem(170px);
+    font-weight: 600;
+    color: vars.$primary;
+    line-height: 1.2;
+    @include help.fontsize(50px);
+}
+
+.page-content
+{
+    padding-top: help.rem(40px);
+}
+
+.page-content-text
+{
+    font-weight: 600;
+    line-height: 1.33;
+    @include help.fontsize(30px);
+}
+
+.page-galerie
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: help.rem(500px);
+    margin-top: help.rem(150px);
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .page-header
+    {
+        padding-top: help.rem(120px);
+        @include help.fontsize(40px);
+    }
+
+    .page-galerie
+    {
+        margin-top: help.rem(100px);
+    }
+}
+
+@media only screen and (max-width:vars.$container-size)
+{
+    .page-header
+    {
+        @include help.fontsize(30px);
+    }
+}
+
+@media only screen and (max-width:vars.$tablet)
+{
+    .page-header
+    {
+        padding-top: help.rem(vars.$gap);
+        @include help.fontsize(25px);
+    }
+
+    .page-content-text
+    {
+        @include help.fontsize(24px);
+    }
+
+    .page-galerie
+    {
+        margin-top: help.rem(vars.$gap);
+        grid-auto-rows: help.rem(390px);
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .page-header
+    {
+        padding-top: help.rem(30px);
+        text-align: center;
+        @include help.fontsize(18px);
+    }
+
+    .page-content
+    {
+        padding-top: help.rem(30px);
+    }
+
+    .page-galerie
+    {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        grid-auto-rows: help.rem(340px);
+    }
+}

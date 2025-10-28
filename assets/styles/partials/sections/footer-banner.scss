@@ -1,0 +1,79 @@
+@use "../variables.scss" as vars;
+@use "../helpers.scss" as help;
+
+.footer-banner
+{
+    width: 100%;
+    height: help.rem(570px);
+}
+
+.section.section-post-banner
+{
+    display: flex;
+    justify-content: space-between;
+    gap: help.rem(120px);
+    align-items: flex-end;
+    background-color: vars.$primary;
+    color: vars.$white;
+    padding-top: help.rem(105px);
+    padding-bottom: help.rem(80px);
+    line-height: 1.2;
+    @include help.fontsize(60px);
+
+    .btn
+    {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .section.section-post-banner
+    {
+        padding-top: help.rem(80px);
+        padding-bottom: help.rem(80px);
+        gap: help.rem(40px);
+        @include help.fontsize(40px);
+    }
+}
+
+@media only screen and (max-width:vars.$container-size)
+{
+    .footer-banner
+    {
+        height: help.rem(440px);
+    }
+
+    .section.section.section-post-banner
+    {
+        padding-top: help.rem(vars.$section-mobile-padding);
+        padding-bottom: help.rem(vars.$section-mobile-padding);
+    }
+}
+
+@media only screen and (max-width:vars.$mobile)
+{
+    .footer-banner
+    {
+        height: help.rem(380px);
+    }
+
+    .section.section-post-banner
+    {
+        padding-top: help.rem(vars.$section-mobile-padding);
+        padding-bottom: help.rem(vars.$section-mobile-padding);
+        flex-direction: column;
+        gap: help.rem(40px);
+        @include help.fontsize(30px);
+    }
+
+    .section.section-post-banner .section-content
+    {
+        text-align: center;
+    }
+
+    .section.section-post-banner::after
+    {
+        order: -1;
+    }
+}

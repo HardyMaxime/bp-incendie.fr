@@ -92,3 +92,19 @@
         padding-right: vars.$container-padding;
     }
 }
+
+.container-fluid-right
+{
+    width: 100%;
+    padding-right: vars.$container-fluid-calc-padding;
+
+    @media only screen and (min-width:2200px)
+    {
+        padding-right: vars.$container-full-calc-padding;
+    }
+
+    @media only screen and (max-width: vars.$container-size-fluid)
+    {
+        padding-right: help.rem(15px);
+    }
+}

@@ -21,7 +21,7 @@ class MenuController extends AbstractController
         return $menu_items;
     }
 
-    public static function getArrayMenuItem(bool $show_all = false):array
+    public function getArrayMenuItem(bool $show_all = false):array
     {
         $originalArray = self::getMainMenu();
         if(empty($originalArray)) return [];
@@ -30,11 +30,13 @@ class MenuController extends AbstractController
         foreach($originalArray as $item)
         {
             if(!$show_all && $item->menu_item_parent !== "0") continue;
+            $primaryArray[$item->ID]['id'] = $item->ID;
             $primaryArray[$item->ID]['title'] = $item->title;
             $primaryArray[$item->ID]['url'] = $item->url;
             $primaryArray[$item->ID]['target'] = $item->target;
             $primaryArray[$item->ID]['parent'] = $item->menu_item_parent;
-            $primaryArray[$item->ID]['child'] = self::getChildMenuItemByArray($originalArray, $item->object_id);
+            $primaryArray[$item->ID]['classes'] = $item->classes;
+            $primaryArray[$item->ID]['child'] = self::getChildMenuItemByArray($originalArray, $item->ID);
             $primaryArray[$item->ID]['object_id'] = $item->object_id;
         }
 

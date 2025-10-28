@@ -2,6 +2,7 @@ import './../styles/main.scss';
 import { triggerRevealScroll } from './partials/scroll-reveal';
 import { preloadTransition } from './partials/preload-transition';
 import { initCookieConsent } from './partials/cookie-consent';
+import { initNavbar } from './partials/navbar';
 //import { initExemple } from './partials/exemple';
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -17,5 +18,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }, 100);
 
     initCookieConsent();
+    initNavbar();
     //initExemple();
 });

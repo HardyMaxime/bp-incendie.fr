@@ -1,6 +1,23 @@
 <?php get_header(); ?>
-    <div class="container">
-        <?= the_title(); ?>
-        <?php the_content(); ?>
-    </div>
+    <header class="section page-header section-dark container-fluid">
+        <hgroup class="heading">
+            <h1 class="heading-title page-heading"><?= get_the_title(); ?></h1>
+        </hgroup>
+    </header>
+    <?php if(have_rows("page-content-listing")): ?>
+        <section class="section section-dark page-content paragraph-content container-fluid">
+            <?php $index = 0; while(have_rows("page-content-listing")): the_row();
+                $className = (get_sub_field("high") ? " high" : "");
+
+                if($index === 0)
+                {
+                    $className .= " first title-arrow";
+                }
+            ?>
+                <div class="paragraph-content-item<?= esc_attr($className); ?>" >
+                    <?= get_sub_field("description"); ?>
+                </div>
+            <?php $index++; endwhile; ?>
+        </section>
+    <?php endif; ?>
 <?php get_footer(); ?>

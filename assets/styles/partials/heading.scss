@@ -26,6 +26,50 @@
     @include help.fontsize(24px);
 }
 
+.title-arrow
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.title-arrow::after
+{
+    content: "";
+    display: block;
+    flex: none;
+    width: help.rem(100px);
+    height: help.rem(100px);
+    background-color: #707070;
+    border-radius: 100%;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOC4wMyIgaGVpZ2h0PSIxOC4wMyI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZGF0YS1uYW1lPSJJY29uIGZlYXRoZXItYXJyb3ctZG93bi1yaWdodCI+PHBhdGggZD0ibTEuNDE0IDE2LjYxNCAxNS4yLTE1LjIiIGRhdGEtbmFtZT0iVHJhY8OpIDgzIi8+PHBhdGggZD0iTTE2LjYxNCAxNi42MTR2LTE1LjJoLTE1LjIiIGRhdGEtbmFtZT0iVHJhY8OpIDg0Ii8+PC9nPjwvc3ZnPg==");
+    background-size: help.rem(30px) help.rem(30px);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s ease-in-out;
+}
+
+.title-arrow.bg-primary::after
+{
+    background-color: vars.$primary;
+}
+
+.title-arrow.bottom-left::after
+{
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .title-arrow::after
+    {
+        width: help.rem(60px);
+        height: help.rem(60px);
+        background-size: help.rem(20px) help.rem(20px);
+    }
+}
+
 @media only screen and (max-width:vars.$container-size)
 {
     .heading-description

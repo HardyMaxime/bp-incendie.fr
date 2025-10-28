@@ -106,4 +106,12 @@ abstract class AbstractController
         global $wp_query;
         $wp_query = $query;
     }
+
+    protected function safe_init(callable $cb, int $priority = 0): void {
+        if (did_action('init')) {
+            $cb(); // on est déjà dans init -> exécuter maintenant
+        } else {
+            add_action('init', $cb, $priority);
+        }
+    }
 }
