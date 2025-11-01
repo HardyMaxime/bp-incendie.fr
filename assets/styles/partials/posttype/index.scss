@@ -7,11 +7,31 @@ body.wp-singular:not(.home)
     color: vars.$white;
 }
 
-.posttype-content:not(.no-grid)
+.posttype-content
 {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: help.rem(110px);
+    display: flex;
+    flex-direction: column;
+    padding-left: help.rem(160px);
+}
+
+.posttype-content-item
+{
+    width: 100%;
+    font-weight: 500;
+    line-height: 1.33;
+    @include help.fontsize(30px);
+}
+
+.posttype-content-item-title
+{
+    margin-bottom: help.rem(65px);
+    @include help.fontsize(60px);
+}
+
+.posttype-content-item-text
+{
+    max-width: help.rem(1080px);
+    width: 100%;
 }
 
 .posttype-taxonomy,
@@ -19,6 +39,11 @@ body.wp-singular:not(.home)
 {
     display: flex;
     flex-direction: column;
+}
+
+.posttype-taxonomy 
+{
+    padding-top: help.rem(120px);
 }
 
 .posttype-taxonomy .title
@@ -31,9 +56,11 @@ body.wp-singular:not(.home)
 {
     list-style: none;
     line-height: 1;
-    margin-top: help.rem(38px);
+    margin-top: help.rem(100px);
     gap: help.rem(38px);
     font-weight: 600;
+    padding-left: help.rem(120px);
+    padding-right: help.rem(120px);
     @include help.fontsize(40px);
 }
 
@@ -48,16 +75,58 @@ body.wp-singular:not(.home)
 
 @media only screen and (max-width:vars.$container-size-fluid)
 {
-    .posttype-content:not(.no-grid)
+    .posttype-content
     {
-        display: grid;
-        grid-template-columns: 1.4fr 1fr;
-        gap: help.rem(vars.$gap);
+        padding-left: help.rem(80px);
+    }
+
+    .posttype-taxonomy 
+    {
+        padding-top: help.rem(80px);
+    }
+
+    .posttype-content-item-title
+    {
+        margin-bottom: help.rem(vars.$gap);
+        @include help.fontsize(50px);
     }
 
     .posttype-taxonomy .title
     {
         @include help.fontsize(40px);
+    }
+
+    .posttype-taxonomy-list
+    {
+        margin-top: help.rem(60px);
+        gap: help.rem(30px);
+        padding-left: help.rem(80px);
+        padding-right: help.rem(80px);
+        @include help.fontsize(30px);
+    }
+}
+
+@media only screen and (max-width:vars.$tablet)
+{
+    .posttype-content
+    {
+        padding-left: 0;
+    }
+
+    .posttype-content-item-title
+    {
+        margin-bottom: help.rem(30px);
+        @include help.fontsize(35px);
+    }
+
+    .posttype-content-item
+    {
+        @include help.fontsize(24px);
+    }
+
+    .posttype-taxonomy .title
+    {
+        @include help.fontsize(30px);
     }
 
     .posttype-taxonomy-list
@@ -68,18 +137,37 @@ body.wp-singular:not(.home)
     }
 }
 
-@media only screen and (max-width:vars.$topbar-breakpoint)
-{
-    .posttype-content:not(.no-grid)
-    {
-        grid-template-columns:1fr;
-    }
-}
-
 @media only screen and (max-width:vars.$mobile)
 {
+    .posttype-taxonomy
+    {
+        text-align: center;
+        padding-top: help.rem(vars.$gap);
+    }
+
     .posttype-taxonomy-list
     {
-        @include help.fontsize(24px);
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+        align-items: center;
+        @include help.fontsize(20px);
+    }
+
+    .posttype-content-item-title
+    {
+        margin-bottom: help.rem(20px);
+        @include help.fontsize(28px);
+    }
+
+    .posttype-content-item
+    {
+        text-align: center;
+        @include help.fontsize(20px);
+    }
+
+    .posttype-taxonomy .title
+    {
+        @include help.fontsize(28px);
     }
 }

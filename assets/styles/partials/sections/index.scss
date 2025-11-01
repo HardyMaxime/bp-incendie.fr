@@ -1,11 +1,18 @@
 @use "../variables.scss" as vars;
 @use "../helpers.scss" as help;
 
+@use "arrow" as arrow;
+
 @use "navbar/navbar" as navbar;
 @use "navbar/navbar-button" as navbar-button;
 
 @use "footer-banner" as footer-banner;
 @use "footer" as footer;
+
+.section
+{
+    overflow: hidden;
+}
 
 .section-dark
 {
@@ -17,35 +24,4 @@
 {
     background: vars.$primary;
     color: vars.$white;
-}
-
-.section-arrow
-{
-    position: relative;
-}
-
-.section-arrow::after
-{
-    display: block;
-    content: "";
-    flex: none;
-    width: help.rem(100px);
-    height: help.rem(100px);
-    background-color: vars.$white;
-    border-radius: 100%;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMy42OTkiIGhlaWdodD0iMzMuNjk5Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmI0MDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzIiBkYXRhLW5hbWU9Ikljb24gZmVhdGhlci1hcnJvdy1kb3duLXJpZ2h0Ij48cGF0aCBkPSJNMzEuNTc3IDIuMTIxIDIuMTIxIDMxLjU3NyIgZGF0YS1uYW1lPSJUcmFjw6kgODMiLz48cGF0aCBkPSJNMi4xMjEgMi4xMjF2MjkuNDU2aDI5LjQ1NiIgZGF0YS1uYW1lPSJUcmFjw6kgODQiLz48L2c+PC9zdmc+");
-    background-size: help.rem(30px) help.rem(30px);
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all .3s ease-in-out;
-}
-
-@media only screen and (max-width:vars.$mobile)
-{
-    .section-arrow::after
-    {
-        width: help.rem(80px);
-        height: help.rem(80px);
-        background-size: help.rem(20px) help.rem(20px);
-    }
 }

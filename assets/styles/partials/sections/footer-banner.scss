@@ -69,11 +69,10 @@
 
     .section.section-post-banner .section-content
     {
+        display: flex;
+        flex-direction: column;
+        gap: help.rem(40px);
+        align-items: center;
         text-align: center;
-    }
-
-    .section.section-post-banner::after
-    {
-        order: -1;
     }
 }

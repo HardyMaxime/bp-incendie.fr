@@ -4,7 +4,7 @@
             <h1 class="heading-title page-heading"><?= get_the_title(); ?></h1>
         </hgroup>
     </header>
-    <section class="page-contact container-fluid title-arrow bg-primary">
+    <section class="page-contact container-fluid section-arrow bg-primary">
         <div class="page-content">
             <?= the_content(); ?>
         </div>

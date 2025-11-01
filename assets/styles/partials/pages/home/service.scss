@@ -4,6 +4,7 @@
 .home .section.section-service
 {
     display: flex;
+    overflow: hidden;
 }
 
 .section-service-content
@@ -36,7 +37,7 @@
     @include help.fontsize(40px);
 }
 
-.section-services-listing a:not(:last-child)::before
+.section-services-listing div:not(:last-child) a::before
 {
     content: "";
     position: absolute;

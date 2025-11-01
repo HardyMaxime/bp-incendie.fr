@@ -1,0 +1,16 @@
+.line-appear
+{
+    position: relative;
+}
+
+.reveal-loaded .reveal .line-appear .line
+{
+    transform: translateX(-30%);
+    opacity: 0 !important;
+    transition: none !important;
+}
+
+.reveal-loaded .line-appear .line
+{
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity .6s cubic-bezier(0.22, 1, 0.36, 1);
+}

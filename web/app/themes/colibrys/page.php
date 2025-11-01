@@ -11,7 +11,7 @@
 
                 if($index === 0)
                 {
-                    $className .= " first title-arrow";
+                    $className .= " first section-arrow";
                 }
             ?>
                 <div class="paragraph-content-item<?= esc_attr($className); ?>" >

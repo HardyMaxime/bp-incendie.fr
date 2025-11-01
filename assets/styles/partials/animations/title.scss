@@ -1,0 +1,29 @@
+.reveal-loaded .reveal.heading.section-heading .heading-title::before
+{
+    clip-path: inset(100% 0 0 0) !important;
+}
+
+.reveal-loaded .heading.section-heading.reveal .inner-text
+{
+    transform: translateY(100%) !important;
+    transition: none !important;
+}
+
+.reveal-loaded .heading.section-heading .heading-title::before
+{
+    display: inline-block;
+    clip-path: inset(0 0 0 0);
+    transition: all ease 1s;
+}
+
+.reveal-loaded .heading.section-heading
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.reveal-loaded .heading.section-heading .inner-text
+{
+    transform: translateY(0);
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}

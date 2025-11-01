@@ -1,25 +1,7 @@
 {
     "key": "group_68f4b7deadf64",
-    "title": "Accueil - Section services",
+    "title": "Accueil - Section domaine d'activités",
     "fields": [
-        {
-            "key": "field_68f4b954bd833",
-            "label": "Information concernant l'ajout de services",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Pour ajouter, modifier ou supprimer un service, rendez-vous dans l'onglet <b>Services<\/b>",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
         {
             "key": "field_68f4b7deaf9d0",
             "label": "Contenu de la section",
@@ -105,6 +87,39 @@
             "mime_types": "",
             "allow_in_bindings": 0,
             "preview_size": "medium"
+        },
+        {
+            "key": "field_6904cb41bcab8",
+            "label": "Choisir les domaines d'activités à mettre en avant",
+            "name": "section-service-listing",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "expertise"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -126,5 +141,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760868781
+    "modified": 1761921894
 }

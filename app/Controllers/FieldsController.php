@@ -14,12 +14,18 @@ final class FieldsController extends AbstractController
     {
        $this->safe_init([$this, 'register_taxonomy']);
        $this->safe_init([$this, 'register_posttype']);
+
+        $this->add_admin_flexible_content_title(
+            "paragraphe",
+            "text",
+            "Paragraphe"
+        );
     }
 
     public function register_posttype(): void
     {
         $expertise_options = [
-            "supports" => ["title", "editor"],
+            "supports" => ["title"],
             "publicly_queryable" => true,
             "with_front" => false,
             "has_archive" => false,

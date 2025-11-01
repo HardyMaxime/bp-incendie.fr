@@ -4,14 +4,14 @@
     $right = Theme()->value("section-about-right");
 ?>
 <section class="section section-about section-dark container">
-    <hgroup class="heading section-heading">
-        <h2 class="heading-title"><?= $title; ?></h2>
-    </hgroup>
-    <div class="section-about-content">
-        <div class="section-about-left">
+    <?php get_template_part('parts/components/section-title', null, [
+        'title' => $title
+    ]); ?>
+    <div class="section-about-content reveal">
+        <div class="section-about-left slide-out-in reveal-2">
             <?= (($left)); ?>
         </div>
-        <div class="section-about-right">
+        <div class="section-about-right slide-in-out reveal-4">
             <?= (($right)); ?>
         </div>
     </div>

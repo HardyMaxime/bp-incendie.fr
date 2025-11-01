@@ -16,13 +16,12 @@
     @include help.fontsize(30px);
 }
 
-.page-contact.title-arrow
+.page-contact.section-arrow
 {
-    align-items: flex-start;
     gap: help.rem(120px);
 }
 
-.page-contact.title-arrow::after
+.page-contact.section-arrow::after
 {
     transform: rotate(190deg);
 }
@@ -50,12 +49,13 @@
 
 @media only screen and (max-width:vars.$mobile)
 {
-    .page-contact.title-arrow
+    .page-contact.section-arrow
     {
         flex-direction: column;
         gap: 20px;
     }
-    .page-contact.title-arrow::after
+
+    .page-contact.section-arrow::after
     {
         order: -1;
         transform: rotate(90deg);

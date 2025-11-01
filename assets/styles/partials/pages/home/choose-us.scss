@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: help.rem(110px);
     padding-top: help.rem(130px);
-    padding-bottom: help.rem(130px);
+    //padding-bottom: help.rem(130px);
 }
 
 .section.section-choose-us .heading
@@ -44,7 +44,7 @@
     .section.section-choose-us
     {
         padding-top: help.rem(100px);
-        padding-bottom: help.rem(100px);
+        //padding-bottom: help.rem(100px);
     }
 }
 
@@ -53,7 +53,7 @@
     .section.section-choose-us
     {
         padding-top: help.rem(vars.$section-mobile-padding);
-        padding-bottom: help.rem(vars.$section-mobile-padding);
+        //padding-bottom: help.rem(vars.$section-mobile-padding);
         gap: help.rem(vars.$section-mobile-padding);
     }
 

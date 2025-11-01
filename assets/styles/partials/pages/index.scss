@@ -28,6 +28,8 @@
 {
     font-weight: 600;
     line-height: 1.33;
+    max-width: help.rem(1080px);
+    width: 100%;
     @include help.fontsize(30px);
 }
 

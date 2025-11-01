@@ -1,0 +1,18 @@
+.reveal-loaded .reveal.reveal-image img
+{
+    transform: scale(1.1) !important;
+    clip-path: inset(0 0 100% 0) !important;
+    transition: none !important;
+}
+
+.reveal-loaded .reveal.reveal-image.reveal-image-right img
+{
+    clip-path: inset(0 0 0 100%) !important;
+}
+
+.reveal-loaded .reveal-image img
+{
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+    transition: all 1.2s ease;
+}

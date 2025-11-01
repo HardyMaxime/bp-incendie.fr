@@ -19,13 +19,13 @@
     padding-right: help.rem(120px);
 }
 
-.paragraph-content .paragraph-content-item.first.title-arrow
+.paragraph-content .paragraph-content-item.first.section-arrow
 {
     gap: help.rem(180px);
     align-items: flex-start;
 }
 
-.paragraph-content .paragraph-content-item.first.title-arrow::after
+.paragraph-content .paragraph-content-item.first.section-arrow::after
 {
     order: -1;
     transform: rotate(90deg);
@@ -60,7 +60,7 @@
         @include help.fontsize(24px);
     }
 
-    .paragraph-content .paragraph-content-item.first.title-arrow
+    .paragraph-content .paragraph-content-item.first.section-arrow
     {
         gap: help.rem(80px);
     }
@@ -83,7 +83,7 @@
 
 @media only screen and (max-width:vars.$tablet)
 {
-    .paragraph-content .paragraph-content-item.first.title-arrow
+    .paragraph-content .paragraph-content-item.first.section-arrow
     {
         flex-direction: column;
         gap: help.rem(40px);
