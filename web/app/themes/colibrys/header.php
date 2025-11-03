@@ -11,4 +11,4 @@
     </head>
     <body <?php body_class(); ?> >
         <?php get_template_part("parts/navbar/navbar"); ?>
-        <main role="main" class="main" >
+        <main role="main" class="main" data-scroll-container >

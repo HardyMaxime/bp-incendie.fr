@@ -34,7 +34,7 @@
     justify-content: space-between;
     gap: help.rem(20px);
     padding: help.rem(30px) 0;
-    @include help.fontsize(40px);
+    @include help.fontsize(35px);
 }
 
 .section-services-listing div:not(:last-child) a::before

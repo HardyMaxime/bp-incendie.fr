@@ -1,0 +1,197 @@
+{
+  "../vite/legacy-polyfills-legacy": {
+    "file": "scripts/polyfills-legacy-BaqCxSSV.js",
+    "name": "polyfills",
+    "src": "../vite/legacy-polyfills-legacy",
+    "isEntry": true
+  },
+  "fonts/Antenna/Antenna-Black.woff": {
+    "file": "fonts/Antenna-Black-CiF08yyI.woff",
+    "src": "fonts/Antenna/Antenna-Black.woff"
+  },
+  "fonts/Antenna/Antenna-Black.woff2": {
+    "file": "fonts/Antenna-Black-BxnXclBF.woff2",
+    "src": "fonts/Antenna/Antenna-Black.woff2"
+  },
+  "fonts/Antenna/Antenna-BlackItalic.woff": {
+    "file": "fonts/Antenna-BlackItalic-DCCT9Mf_.woff",
+    "src": "fonts/Antenna/Antenna-BlackItalic.woff"
+  },
+  "fonts/Antenna/Antenna-BlackItalic.woff2": {
+    "file": "fonts/Antenna-BlackItalic-B6dz2M-w.woff2",
+    "src": "fonts/Antenna/Antenna-BlackItalic.woff2"
+  },
+  "fonts/Antenna/Antenna-Bold.woff": {
+    "file": "fonts/Antenna-Bold-C2Q-lTDp.woff",
+    "src": "fonts/Antenna/Antenna-Bold.woff"
+  },
+  "fonts/Antenna/Antenna-Bold.woff2": {
+    "file": "fonts/Antenna-Bold-B5wjxssm.woff2",
+    "src": "fonts/Antenna/Antenna-Bold.woff2"
+  },
+  "fonts/Antenna/Antenna-BoldItalic.woff": {
+    "file": "fonts/Antenna-BoldItalic-DT5PRuIr.woff",
+    "src": "fonts/Antenna/Antenna-BoldItalic.woff"
+  },
+  "fonts/Antenna/Antenna-BoldItalic.woff2": {
+    "file": "fonts/Antenna-BoldItalic-YNv3SFUc.woff2",
+    "src": "fonts/Antenna/Antenna-BoldItalic.woff2"
+  },
+  "fonts/Antenna/Antenna-ExtraLight.woff": {
+    "file": "fonts/Antenna-ExtraLight-CRUcWzap.woff",
+    "src": "fonts/Antenna/Antenna-ExtraLight.woff"
+  },
+  "fonts/Antenna/Antenna-ExtraLight.woff2": {
+    "file": "fonts/Antenna-ExtraLight-ZWLJ065r.woff2",
+    "src": "fonts/Antenna/Antenna-ExtraLight.woff2"
+  },
+  "fonts/Antenna/Antenna-ExtraLightItalic.woff": {
+    "file": "fonts/Antenna-ExtraLightItalic-Dm8hoYy5.woff",
+    "src": "fonts/Antenna/Antenna-ExtraLightItalic.woff"
+  },
+  "fonts/Antenna/Antenna-ExtraLightItalic.woff2": {
+    "file": "fonts/Antenna-ExtraLightItalic-CloEx06A.woff2",
+    "src": "fonts/Antenna/Antenna-ExtraLightItalic.woff2"
+  },
+  "fonts/Antenna/Antenna-Light.woff": {
+    "file": "fonts/Antenna-Light-CiDf4v50.woff",
+    "src": "fonts/Antenna/Antenna-Light.woff"
+  },
+  "fonts/Antenna/Antenna-Light.woff2": {
+    "file": "fonts/Antenna-Light-Atle1Mka.woff2",
+    "src": "fonts/Antenna/Antenna-Light.woff2"
+  },
+  "fonts/Antenna/Antenna-LightItalic.woff": {
+    "file": "fonts/Antenna-LightItalic-Dp-wcUXq.woff",
+    "src": "fonts/Antenna/Antenna-LightItalic.woff"
+  },
+  "fonts/Antenna/Antenna-LightItalic.woff2": {
+    "file": "fonts/Antenna-LightItalic-Di8VYD2c.woff2",
+    "src": "fonts/Antenna/Antenna-LightItalic.woff2"
+  },
+  "fonts/Antenna/Antenna-Medium.woff": {
+    "file": "fonts/Antenna-Medium-DM0c4f2H.woff",
+    "src": "fonts/Antenna/Antenna-Medium.woff"
+  },
+  "fonts/Antenna/Antenna-Medium.woff2": {
+    "file": "fonts/Antenna-Medium-CUPInvId.woff2",
+    "src": "fonts/Antenna/Antenna-Medium.woff2"
+  },
+  "fonts/Antenna/Antenna-MediumItalic.woff": {
+    "file": "fonts/Antenna-MediumItalic-eaDgBUYE.woff",
+    "src": "fonts/Antenna/Antenna-MediumItalic.woff"
+  },
+  "fonts/Antenna/Antenna-MediumItalic.woff2": {
+    "file": "fonts/Antenna-MediumItalic-B_HisaXC.woff2",
+    "src": "fonts/Antenna/Antenna-MediumItalic.woff2"
+  },
+  "fonts/Antenna/Antenna-Regular.woff": {
+    "file": "fonts/Antenna-Regular-BO96Kl6Q.woff",
+    "src": "fonts/Antenna/Antenna-Regular.woff"
+  },
+  "fonts/Antenna/Antenna-Regular.woff2": {
+    "file": "fonts/Antenna-Regular-CRp10wAA.woff2",
+    "src": "fonts/Antenna/Antenna-Regular.woff2"
+  },
+  "fonts/Antenna/Antenna-RegularItalic.woff": {
+    "file": "fonts/Antenna-RegularItalic-CLeWxeQU.woff",
+    "src": "fonts/Antenna/Antenna-RegularItalic.woff"
+  },
+  "fonts/Antenna/Antenna-RegularItalic.woff2": {
+    "file": "fonts/Antenna-RegularItalic-CvPOpuE3.woff2",
+    "src": "fonts/Antenna/Antenna-RegularItalic.woff2"
+  },
+  "fonts/Antenna/Antenna-Thin.woff": {
+    "file": "fonts/Antenna-Thin-DWRrdK41.woff",
+    "src": "fonts/Antenna/Antenna-Thin.woff"
+  },
+  "fonts/Antenna/Antenna-Thin.woff2": {
+    "file": "fonts/Antenna-Thin-Dzj6j6NL.woff2",
+    "src": "fonts/Antenna/Antenna-Thin.woff2"
+  },
+  "scripts/main-legacy.js": {
+    "file": "scripts/main-legacy-5o4bCVAg.js",
+    "name": "main",
+    "src": "scripts/main-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "styles/main-legacy.scss"
+    ]
+  },
+  "scripts/main.js": {
+    "file": "scripts/main-6aqMZKcM.js",
+    "name": "main",
+    "src": "scripts/main.js",
+    "isEntry": true,
+    "css": [
+      "css/main-D7eWjvI2.css"
+    ],
+    "assets": [
+      "fonts/Antenna-ExtraLight-ZWLJ065r.woff2",
+      "fonts/Antenna-ExtraLight-CRUcWzap.woff",
+      "fonts/Antenna-Regular-CRp10wAA.woff2",
+      "fonts/Antenna-Regular-BO96Kl6Q.woff",
+      "fonts/Antenna-LightItalic-Di8VYD2c.woff2",
+      "fonts/Antenna-LightItalic-Dp-wcUXq.woff",
+      "fonts/Antenna-BoldItalic-YNv3SFUc.woff2",
+      "fonts/Antenna-BoldItalic-DT5PRuIr.woff",
+      "fonts/Antenna-ExtraLightItalic-CloEx06A.woff2",
+      "fonts/Antenna-ExtraLightItalic-Dm8hoYy5.woff",
+      "fonts/Antenna-Thin-Dzj6j6NL.woff2",
+      "fonts/Antenna-Thin-DWRrdK41.woff",
+      "fonts/Antenna-RegularItalic-CvPOpuE3.woff2",
+      "fonts/Antenna-RegularItalic-CLeWxeQU.woff",
+      "fonts/Antenna-Bold-B5wjxssm.woff2",
+      "fonts/Antenna-Bold-C2Q-lTDp.woff",
+      "fonts/Antenna-MediumItalic-B_HisaXC.woff2",
+      "fonts/Antenna-MediumItalic-eaDgBUYE.woff",
+      "fonts/Antenna-Medium-CUPInvId.woff2",
+      "fonts/Antenna-Medium-DM0c4f2H.woff",
+      "fonts/Antenna-Light-Atle1Mka.woff2",
+      "fonts/Antenna-Light-CiDf4v50.woff",
+      "fonts/Antenna-Black-BxnXclBF.woff2",
+      "fonts/Antenna-Black-CiF08yyI.woff",
+      "fonts/Antenna-BlackItalic-B6dz2M-w.woff2",
+      "fonts/Antenna-BlackItalic-DCCT9Mf_.woff"
+    ]
+  },
+  "styles/main-legacy.scss": {
+    "file": "scripts/main-legacy-C4szztEV.js",
+    "name": "main",
+    "src": "styles/main-legacy.scss",
+    "isEntry": true,
+    "assets": [
+      "fonts/Antenna-ExtraLight-ZWLJ065r.woff2",
+      "fonts/Antenna-ExtraLight-CRUcWzap.woff",
+      "fonts/Antenna-Regular-CRp10wAA.woff2",
+      "fonts/Antenna-Regular-BO96Kl6Q.woff",
+      "fonts/Antenna-LightItalic-Di8VYD2c.woff2",
+      "fonts/Antenna-LightItalic-Dp-wcUXq.woff",
+      "fonts/Antenna-BoldItalic-YNv3SFUc.woff2",
+      "fonts/Antenna-BoldItalic-DT5PRuIr.woff",
+      "fonts/Antenna-ExtraLightItalic-CloEx06A.woff2",
+      "fonts/Antenna-ExtraLightItalic-Dm8hoYy5.woff",
+      "fonts/Antenna-Thin-Dzj6j6NL.woff2",
+      "fonts/Antenna-Thin-DWRrdK41.woff",
+      "fonts/Antenna-RegularItalic-CvPOpuE3.woff2",
+      "fonts/Antenna-RegularItalic-CLeWxeQU.woff",
+      "fonts/Antenna-Bold-B5wjxssm.woff2",
+      "fonts/Antenna-Bold-C2Q-lTDp.woff",
+      "fonts/Antenna-MediumItalic-B_HisaXC.woff2",
+      "fonts/Antenna-MediumItalic-eaDgBUYE.woff",
+      "fonts/Antenna-Medium-CUPInvId.woff2",
+      "fonts/Antenna-Medium-DM0c4f2H.woff",
+      "fonts/Antenna-Light-Atle1Mka.woff2",
+      "fonts/Antenna-Light-CiDf4v50.woff",
+      "fonts/Antenna-Black-BxnXclBF.woff2",
+      "fonts/Antenna-Black-CiF08yyI.woff",
+      "fonts/Antenna-BlackItalic-B6dz2M-w.woff2",
+      "fonts/Antenna-BlackItalic-DCCT9Mf_.woff"
+    ]
+  },
+  "styles/main.scss": {
+    "file": "css/main-D7eWjvI2.css",
+    "src": "styles/main.scss",
+    "isEntry": true
+  }
+}
