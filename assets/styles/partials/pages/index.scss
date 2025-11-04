@@ -9,14 +9,15 @@
 
 @use "paragraph" as paragraph;
 @use "./contact" as contact;
+@use "./mentions" as mentions;
 
 .page-header
 {
     padding-top: help.rem(170px);
     font-weight: 600;
     color: vars.$primary;
-    line-height: 1.2;
-    @include help.fontsize(50px);
+    line-height: 1.1;
+    @include help.fontsize(40px);
 }
 
 .page-content

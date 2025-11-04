@@ -115,6 +115,5 @@ final class AssetsProvider extends AbstractProvider
             wp_enqueue_script('index', $this->resolve("scripts/main.js"), array());
             wp_enqueue_style('style', $this->resolve("styles/main.scss"), array());
         }
-
     }
 }

@@ -1,6 +1,6 @@
 {
   "../vite/legacy-polyfills-legacy": {
-    "file": "scripts/polyfills-legacy-BaqCxSSV.js",
+    "file": "scripts/polyfills-legacy-DSAbRZSG.js",
     "name": "polyfills",
     "src": "../vite/legacy-polyfills-legacy",
     "isEntry": true
@@ -110,7 +110,7 @@
     "src": "fonts/Antenna/Antenna-Thin.woff2"
   },
   "scripts/main-legacy.js": {
-    "file": "scripts/main-legacy-5o4bCVAg.js",
+    "file": "scripts/main-legacy-DvGx49uN.js",
     "name": "main",
     "src": "scripts/main-legacy.js",
     "isEntry": true,
@@ -119,12 +119,12 @@
     ]
   },
   "scripts/main.js": {
-    "file": "scripts/main-6aqMZKcM.js",
+    "file": "scripts/main-DM7D8ycB.js",
     "name": "main",
     "src": "scripts/main.js",
     "isEntry": true,
     "css": [
-      "css/main-D7eWjvI2.css"
+      "css/main-OjtJZ1vd.css"
     ],
     "assets": [
       "fonts/Antenna-ExtraLight-ZWLJ065r.woff2",
@@ -156,7 +156,7 @@
     ]
   },
   "styles/main-legacy.scss": {
-    "file": "scripts/main-legacy-C4szztEV.js",
+    "file": "scripts/main-legacy-ClHEcTor.js",
     "name": "main",
     "src": "styles/main-legacy.scss",
     "isEntry": true,
@@ -190,7 +190,7 @@
     ]
   },
   "styles/main.scss": {
-    "file": "css/main-D7eWjvI2.css",
+    "file": "css/main-OjtJZ1vd.css",
     "src": "styles/main.scss",
     "isEntry": true
   }

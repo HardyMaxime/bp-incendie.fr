@@ -1,0 +1,129 @@
+{
+    "key": "group_62f10cd253c57",
+    "title": "Mentions Légales",
+    "fields": [
+        {
+            "key": "field_62f10cde1d2ba",
+            "label": "Colonnes",
+            "name": "mentions_colonnes",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_62f10cf3996f4": {
+                    "key": "layout_62f10cf3996f4",
+                    "name": "mentions_colonne",
+                    "label": "Colonne",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62f10d241d2bb",
+                            "label": "Contenu de la colonne",
+                            "name": "mentions_colonne_content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "1",
+                    "max": "3"
+                }
+            },
+            "button_label": "Ajouter une colonne",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_62f10d461d2bc",
+            "label": "Paragraphes",
+            "name": "mentions_paragraphes",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_62f10d7da89b1": {
+                    "key": "layout_62f10d7da89b1",
+                    "name": "mentions_paragraphe",
+                    "label": "Paragraphe",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62f10ecf81f99",
+                            "label": "Text",
+                            "name": "mentions_paragraphe_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Ajouter un paragraphe",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "99"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "page_attributes"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1762245569
+}

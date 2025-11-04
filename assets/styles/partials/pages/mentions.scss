@@ -1,0 +1,79 @@
+@use "../variables.scss" as vars;
+@use "../helpers.scss" as help;
+
+.section-mentions
+{
+    @include help.fontsize(20px);
+}
+
+.section-mentions strong
+{
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: help.rem(15px);
+}
+
+.section-default-layout {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    gap: help.rem(90px);
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: help.rem(80px);
+}
+
+.section-mentions-paragraphe
+{
+    margin-top: help.rem(30px);
+}
+
+.section-default-layout-col ul 
+{
+    margin-top: help.rem(50px);
+
+    &:first-child
+    {
+        margin-top: help.rem(0px);
+    }
+}
+
+@media only screen and (max-width:vars.$container-size-fluid)
+{
+    .section-default-layout
+    {
+        gap: help.rem(20px);
+    }
+}
+
+@media only screen and (max-width:vars.$container-size)
+{
+    .section-default-layout
+    {
+        flex-wrap: wrap;
+    }
+    .section-default-layout-col {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: vars.$mobile)
+{
+    .section-mentions
+    {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .section-default-layout {
+        gap: help.rem(60px);
+        text-align: center;
+        margin-bottom: help.rem(40px);
+    }
+
+    .section-default-layout-col {
+        flex-basis: 100%;
+    }
+}

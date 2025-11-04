@@ -12,6 +12,7 @@ body.wp-singular:not(.home)
     display: flex;
     flex-direction: column;
     padding-left: help.rem(160px);
+    margin-top:  help.rem(70px);
 }
 
 .posttype-content-item
@@ -25,7 +26,7 @@ body.wp-singular:not(.home)
 .posttype-content-item-title
 {
     margin-bottom: help.rem(65px);
-    @include help.fontsize(60px);
+    @include help.fontsize(45px);
 }
 
 .posttype-content-item-text
@@ -139,6 +140,11 @@ body.wp-singular:not(.home)
 
 @media only screen and (max-width:vars.$mobile)
 {
+    .posttype-content
+    {
+        margin-top:  help.rem(20px);
+    }
+
     .posttype-taxonomy
     {
         text-align: center;

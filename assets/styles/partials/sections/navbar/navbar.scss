@@ -111,12 +111,15 @@ body.scrolled .navbar
 .menu-child
 {
     list-style: none;
+    max-width: help.rem(400px);
+    width: 100%;
 }
 
 .menu-child-link
 {
     padding: help.rem(15px) 0;
     width: 100%;
+    text-wrap: auto;
 }
 
 @media only screen and (min-width:vars.$topbar-breakpoint)
@@ -129,6 +132,7 @@ body.scrolled .navbar
         flex-direction: column;
         top: 100%;
         left: 50%;
+        max-width: unset;
         background-color: vars.$white;
         color: vars.$color;
         list-style: none;
