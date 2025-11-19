@@ -13,6 +13,7 @@ body.wp-singular:not(.home)
     flex-direction: column;
     padding-left: help.rem(160px);
     margin-top:  help.rem(70px);
+    gap: help.rem(80px);
 }
 
 .posttype-content-item
@@ -20,13 +21,14 @@ body.wp-singular:not(.home)
     width: 100%;
     font-weight: 500;
     line-height: 1.33;
-    @include help.fontsize(30px);
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .posttype-content-item-title
 {
     margin-bottom: help.rem(65px);
-    @include help.fontsize(45px);
+    @include help.fontsize(40px);
 }
 
 .posttype-content-item-text
@@ -112,6 +114,7 @@ body.wp-singular:not(.home)
     .posttype-content
     {
         padding-left: 0;
+        gap: vars.$gap;
     }
 
     .posttype-content-item-title

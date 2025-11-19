@@ -16,8 +16,8 @@
 
 .home .section-header .heading-title
 {
-    @include help.fontsize(90px);
     line-height: 1.11;
+    @include help.fontsize(70px);
 }
 
 .home .section-header .section-banner 
@@ -36,7 +36,7 @@
 
     .home .section-header .heading-title
     {
-        @include help.fontsize(80px);
+        @include help.fontsize(60px);
     }
 
     .home .section-header .section-banner 

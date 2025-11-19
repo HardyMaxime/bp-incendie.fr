@@ -13,11 +13,11 @@
 
 .page-header
 {
-    padding-top: help.rem(170px);
+    padding-top: help.rem(140px);
     font-weight: 600;
     color: vars.$primary;
-    line-height: 1.1;
-    @include help.fontsize(40px);
+    line-height: 1.3;
+    @include help.fontsize(30px);
 }
 
 .page-content
@@ -47,8 +47,8 @@
 {
     .page-header
     {
-        padding-top: help.rem(120px);
-        @include help.fontsize(40px);
+        padding-top: help.rem(90px);
+        @include help.fontsize(26px);
     }
 
     .page-galerie

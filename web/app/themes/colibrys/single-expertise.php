@@ -10,11 +10,11 @@
     <section class="section section-dark page-content container-fluid">
         <?php if(have_rows('paragraphe')): ?>
             <div class="posttype-content">
-                <div class="posttype-content-inner section-arrow bottom-left bg-primary align-top">
                     <?php $index=0; while(have_rows('paragraphe')): the_row(); 
                         $title = get_sub_field("title");
                     ?>
-                        <div class="posttype-content-item reveal">
+                    <div class="posttype-content-inner reveal section-arrow bottom-left bg-primary align-top">
+                        <div class="posttype-content-item">
                             <?php if(!empty($title)): ?>
                                 <h2 class="posttype-content-item-title slide-out-in reveal-<?= esc_attr($index); ?>"><?= $title; ?></h2>
                             <?php endif; ?>
@@ -22,8 +22,8 @@
                                 <?= get_sub_field("text"); ?>
                             </div>
                         </div>
-                    <?php $index++; endwhile; ?>
-                </div>
+                    </div>
+                <?php $index++; endwhile; ?>
             </div>
         <?php endif; ?>
     </section>

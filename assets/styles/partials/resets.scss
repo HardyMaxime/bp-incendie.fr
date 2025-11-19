@@ -72,6 +72,11 @@ strong
     font-weight: 700;
 }
 
+.section-dark strong
+{
+    color: vars.$primary;
+}
+
 .custom-select
 {
     position: relative;

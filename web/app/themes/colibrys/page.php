@@ -14,9 +14,13 @@
                     $className .= " first section-arrow";
                 }
             ?>
+            <div class="paragraph-content-item-outter">
                 <div class="paragraph-content-item<?= esc_attr($className); ?>" >
-                    <?= get_sub_field("description"); ?>
+                    <div class="inner">
+                        <?= get_sub_field("description"); ?>
+                    </div>
                 </div>
+            </div>
             <?php $index++; endwhile; ?>
         </section>
     <?php endif; ?>
