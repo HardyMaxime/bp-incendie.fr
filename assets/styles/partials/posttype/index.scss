@@ -1,7 +1,8 @@
 @use "../variables.scss" as vars;
 @use "../helpers.scss" as help;
 
-body.wp-singular:not(.home)
+body.wp-singular:not(.home),
+body.archive
 {
     background: vars.$background-secondary;
     color: vars.$white;

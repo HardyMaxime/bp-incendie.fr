@@ -110,7 +110,7 @@
     "src": "fonts/Antenna/Antenna-Thin.woff2"
   },
   "scripts/main-legacy.js": {
-    "file": "scripts/main-legacy-B-V-lFzK.js",
+    "file": "scripts/main-legacy-DOBVo8Io.js",
     "name": "main",
     "src": "scripts/main-legacy.js",
     "isEntry": true,
@@ -119,12 +119,12 @@
     ]
   },
   "scripts/main.js": {
-    "file": "scripts/main-CQtvJ6Fr.js",
+    "file": "scripts/main-DPYqAH-C.js",
     "name": "main",
     "src": "scripts/main.js",
     "isEntry": true,
     "css": [
-      "css/main-yK0h83xF.css"
+      "css/main-ztnkawI6.css"
     ],
     "assets": [
       "fonts/Antenna-ExtraLight-ZWLJ065r.woff2",
@@ -156,7 +156,7 @@
     ]
   },
   "styles/main-legacy.scss": {
-    "file": "scripts/main-legacy-DZ-YBazm.js",
+    "file": "scripts/main-legacy-CqMHxolP.js",
     "name": "main",
     "src": "styles/main-legacy.scss",
     "isEntry": true,
@@ -190,7 +190,7 @@
     ]
   },
   "styles/main.scss": {
-    "file": "css/main-yK0h83xF.css",
+    "file": "css/main-ztnkawI6.css",
     "src": "styles/main.scss",
     "isEntry": true
   }
